@@ -1,0 +1,20 @@
+1.Write html code Headings - h1 to h6
+2.Write html code Paragraph and line breaks
+3.Write html codeText formatting
+4.Write html codefor Preformatted text (Preserve line breaks and spaces)
+5.Write html code Sub and Superscript text
+6.Write html codefor Long and short quotations
+7.Write html code Abbreviations and acronyms
+8.Write html code for Marking deleted and inserted text
+9.Write html code forSetting text direction of an element
+10.Write html code for Insert contact information
+11.Write html code Inserting comments
+12.Write html code for Inserting horizontal lines.
+13.write a html program Create hyperlink
+14.write a html program for Using image as a link
+15.write a html program Open link in a new browser window
+16.write a html program for Navigate inside page - Jump link
+17.write a html programfor  Move outside of an iframe.
+18.Setting width and height of the images
+19.by using html code Aligning images
+20.Make a hyperlink of an image

@@ -1,0 +1,14 @@
+1.Making a simple table - The most basic form of a table
+2.write a html code for Setting the dimension of a table
+3.Specify the table caption
+4.write a html program Tables with borders - Adding the default table borders
+5.Sets the padding of table cells - The cellpadding attribute
+6.write a html program Sets the distance between table cells - The cellspacing attribute
+7.write a htm code Table cells that span more than one row/column - The rowspan/colspan attribute.
+8.Creating an unordered list
+9.Creating an ordered list
+10.Creating a definition list
+11.Creating a nested list - Single level
+12.Using an iframe to embed a web page inside another HTML document
+13.Removing the default frameborder from an iframe
+14.Opening linked web pages inside an iframe
