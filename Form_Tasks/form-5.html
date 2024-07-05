@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form 5</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .container{
+            width: 400px;
+            /* height: 400px; */
+            margin: auto;
+            margin-top: 50px;
+            background-color: rgb(189, 217, 228);
+            border: 4px solid white;
+            padding-left: 100px;
+            padding-right: 30px;
+        }
+        label{
+            width: 100px;
+            display: inline-block;
+        }
+        #submit{
+            margin-left: 120px;
+        }
+        #reset{
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <h2 style="text-align: center;"><u>Registration form</u></h2><br>
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname"><br><br>
+
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname"><br><br>
+
+            <label for="nickname">Nick Name:</label>
+            <input type="text" id="nickname" name="nickname"><br><br>
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email"><br><br>
+
+            <label for="pwd">Password:</label>
+            <input type="text" id="pwd" name="pwd"><br><br>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="text" id="dob" name="dob"><br><br>
+
+            <label for="gender">Gender:</label>
+                <input type="radio" value="Male">Male</input>
+                <input type="radio" value="Female">Female</input>
+                <input type="radio" value="Others">Others</input>  <br><br>
+
+                <label for="mob">Mobile:</label>
+                <input type="text" id="mob" name="mob"><br><br> 
+                
+                <label for="address">Address:</label>
+                <textarea name="address" id="address" rows="2"></textarea><br><br>
+
+                <input type="submit" id="submit" value="Submit">
+                <input type="reset" id="reset" value="Reset"><br><br>
+
+
+
+        
+
+        </form>
+    </div>
+</body>
+</html>

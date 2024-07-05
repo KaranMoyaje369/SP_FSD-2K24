@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form 4</title>
+
+    <style>
+        body{
+            background-color: black;
+        }
+        .container{
+            background-color: rgb(255, 113, 137);
+            width: 900px;
+            height: 500px;
+            margin: auto;
+            margin-top: 50px;
+            
+        }
+        .form{
+            background-color: rgb(129, 31, 47);
+            /* border: 2px solid black; */
+            width: 700px;
+            height: 380px;
+            margin: auto;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            position: relative;
+            top: 40px; 
+        }
+        form{
+            margin: auto;
+            width: 350px;
+            /* border: 2px solid green; */
+        }
+        label{
+            width: 100px;
+            display: inline-block;
+            color: white;
+        }
+        span{
+            color: white;
+        }
+        #button{
+            width: 300px;
+        }
+    
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+            <form action="">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name"><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br><br>
+
+                <label for="pwd">Password:</label>
+                <input type="password" id="pwd" name="pwd"><br><br>
+
+                <label for="phone-no">Phone Number:</label>
+                <input type="number" id="phone-no" name="phone-no"><br><br>
+
+                <label for="gender">Gender:</label>
+                <input type="radio" id="gender" name="gender" value="Male"><span>Male</span>
+
+                <input type="radio" id="gender" name="gender" value="Female"><span>Female</span>
+
+                <input type="radio" id="gender" name="gender" value="Other"><span>Other</span> <br><br>
+
+                <label for="lang">Language:</label>
+                <select name="lang" id="lang">
+                    <option value="" selected disabled hidden>Select Language</option>
+                    <option value="eng">English</option>
+                    <option value="hindi">Hindi</option>
+                    <option value="marathi">Marathi</option>
+                </select> <br><br>
+
+                <label for="zip-code">Zip Code:</label>
+                <input type="number" id="zip-code" name="zip-code"><br><br>
+
+                <label for="about">About:</label>
+                <textarea name="about" id="about" rows="" placeholder="Write about yourself..."></textarea><br><br>
+
+                <input type="submit" id="button" value="Register">
+
+            </form>
+        </div>
+    </div>
+</body>
+</html>

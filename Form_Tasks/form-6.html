@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form 6</title>
+    <style>
+        button{
+            border-radius: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>My feedback form</h1>
+    <form action="">
+        <ul>
+            <li>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+            </li>
+            <li>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </li>
+            <li>
+                <label for="pwd">Password:</label>
+                <input type="password" id="pwd" name="pwd">
+            </li>
+            <br>
+            <li>
+                <p>Please check all the emotions that apply to you:</p>
+                <ul>
+                    <li type="disc">Angry <input type="checkbox" value="angry" name="angry" checked></li> 
+                    <li type="disc">Sad <input type="checkbox" value="sad" name="sad"></li>
+                    <li type="disc">Happy <input type="checkbox" value="happy" name="happy" ></li>
+                    <li type="disc">Ambivalent <input type="checkbox" value="ambivalent" name="ambivalent" ></li>
+                </ul> 
+            </li>
+
+            <li>
+                <p>Please check all the emotions that apply to you:</p>
+                <ul>
+                    <li type="disc">Very satisfied <input type="radio" value="Very satisfied" name="Very satisfied" checked></li> 
+                    <li type="disc">Satisfied <input type="radio" value="Satisfied" name="Satisfied"></li>
+                    <li type="disc">Didn't care <input type="radio" value="Didn't care" name="Didn't care" ></li>
+                    <li type="disc">Ambivalent <input type="radio" value="ambivalent" name="ambivalent" ></li>
+                    <li type="disc">Dissatisfied <input type="radio" value="Dissatisfied" name="Dissatisfied" ></li>
+                </ul> 
+            </li>
+
+            <li>
+                <label for="text">Further comments:</label>
+                <textarea name="text" id="text" rows="3ss"></textarea>
+            </li>
+        
+        
+
+            <li>
+                <label for="photo">Bio photo:</label>
+                <input type="text" name="photo" id="photo">
+                <button>Choose...</button>
+            </li>
+            <li>
+                <label for="location">Location visited:</label>
+               <input type="number" id="location" name="location" placeholder="Select location">
+            </li>
+            <li>
+                <button type="submit">Submit</button>
+            </li>
+        </ul>
+    </form>
+    
+</body>
+</html>
