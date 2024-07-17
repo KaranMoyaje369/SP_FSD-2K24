@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 40%;
+            height: auto;
+            background-color: rgb(236, 232, 232);
+            padding: 20px;
+            margin: 40px auto;
+        }
+
+        label {
+            display: block;
+            padding-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            height: 30px;
+            /* outline: none; */
+            border: none;
+            border-radius: 5px;
+        }
+
+        input::placeholder {
+            padding-left: 5px;
+            opacity: 0.7;
+        }
+
+        select {
+            width: 100%;
+            height: 30px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .btn {
+            background-color: rgb(108, 255, 108);
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="">
+            <label for="fname">Name:</label>
+            <input type="text" id="fname" name="fname" placeholder="Your name..."><br><br>
+            <label for="sname">Surname:</label>
+            <input type="text" name="sname" id="sname" placeholder="Your surname..."><br><br>
+            <label for="country">Country</label>
+            <select name="country" id="country">
+                <option value="poland">Poland</option>
+                <option value="india">India</option>
+            </select><br><br>
+            <input type="submit" class="btn" value="Submit">
+        </form>
+    </div>
+</body>
+
+</html>
