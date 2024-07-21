@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 9</title>
+
+    <style>
+        .container{
+            background-color: rgb(46, 46, 235);
+            width: 800px;
+            margin: 40px auto;
+            padding: 40px;
+
+        }
+        h2{
+            color: white;
+            padding: 20px 0 10px 20px;
+        }
+        .table{
+            /* border: 2px solid red; */
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            /* margin-left: 40px; */
+        }
+
+        .content-1{
+            /* flex-grow: 1; */
+            /* display: flex; */
+        }
+       
+        .content-1 div{
+            color: yellow;
+            padding: 10px;
+
+            border: 2px solid rgb(207, 194, 194);
+        }
+        .content-2 div{
+            color: white;
+            padding: 10px;
+            border: 2px solid rgb(207, 194, 194);
+            flex-grow: 1;
+            
+
+        
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Properties for the Parent</h2>
+
+        <div class="table">
+            <div class="content-1">
+                <div>display</div>
+                <div>flex-direction</div>
+                <div>flex-wrap</div>
+                <div>flex-flow</div>
+                <div>justify-content</div>
+                <div>align-content</div>
+                <div>align-items</div>
+            </div>
+            <div class="content-2">
+                <div>Defines a flex container - flex formatting context.</div>
+                <div>Define the main axis in the container</div>
+                <div>Allows flex item to wrap into more than one line.</div>
+                <div>Shorthand for flex-direction + flex-wrap.</div>
+                <div>Align items along the main axis</div>
+                <div>Align items along the cross axis on the single line.</div>
+                <div>Aligns multiple lines of items on the cross axis.</div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

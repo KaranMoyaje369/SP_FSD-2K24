@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+
+    <style>
+        body {
+            background-color: rgb(45, 45, 224);
+        }
+
+        .container {
+            /* border: 2px solid black; */
+            width: 600px;
+            margin: 40px auto;
+
+        }
+
+        h1 {
+            color: white;
+            font-size: 40px;
+            text-align: center;
+
+        }
+
+        .table {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+        }
+
+
+
+        div {
+            line-height: 2.5rem;
+        }
+
+        .containt1 {
+            flex-grow: 1;
+        }
+
+
+        .containt1 div {
+            border: 1px solid gray;
+            padding-left: 10px;
+            color: yellow;
+
+        }
+
+        .containt2 div {
+            /* flex-grow: 1; */
+            padding-left: 10px;
+            border: 1px solid gray;
+            color: white;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>
+            Properties For The Children
+        </h1>
+
+        <div class="table">
+            <div class="containt1">
+                <div>order</div>
+                <div>flex-grow</div>
+                <div>flex-shrink</div>
+                <div>flex-basis</div>
+                <div>flex</div>
+                <div>align-self</div>
+            </div>
+
+            <div class="containt2">
+                <div>Allow to change the order of the item without alterning the source order. </div>
+                <div>An item can grow to fill up the available free space.</div>
+                <div>An item can shrink if there is not enough space available.</div>
+                <div>Define the size of the an item before space is distributed.</div>
+                <div>Shortand for flex-grow + flex-shrink + flex-basis.</div>
+                <div>Ability to align one single item within the flex container.</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

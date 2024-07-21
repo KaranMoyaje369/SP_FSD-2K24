@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 21</title>
+
+    <style>
+        body{
+            height: 95vh;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container{
+            background-color: pink;
+        }
+
+        .container div{
+            width: 500px;
+        }
+
+        .child{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            line-height: 1.6rem;
+            padding: 10px 0;
+            font-size: 30px;
+        }
+
+        .child1{
+            color: white;
+        }
+
+        .child2{
+            background-color: black;
+            color: white;
+        }
+
+        .child3{
+            background-color: skyblue;
+            color: blue;
+        }
+
+        .child2,.child3{
+            margin-bottom: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="child child1">Navbar</div>
+        <div class="child child2">Toggle Menu</div>
+        <div class="child child3">Home</div>
+        <div class="child child3">About</div>
+        <div class="child child3">Portfolio</div>
+        <div class="child child3">Services</div>
+        <div class="child child3">Contact</div>
+    </div>
+</body>
+</html>

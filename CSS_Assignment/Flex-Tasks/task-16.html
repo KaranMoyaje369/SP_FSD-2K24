@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 17</title>
+
+    <style>
+        .header {
+            width: 100%;
+            height: 100px;
+            background-color: rgb(124, 8, 124);
+            color: white;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .parent{
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+          
+        }
+
+        .parent .child{
+            background-color: rgb(7, 169, 233);
+            padding: 10px;
+            width: 90%;
+        }
+
+        .parent .child-a{
+            background-color: rgb(7, 169, 233);
+            padding: 10px;
+        }
+
+        .child1 div{
+            /* border: 2px solid red; */
+            width: 20%;
+            background-color: rgb(214, 205, 205);
+            padding: 5px 0;
+            text-align: center;
+        }
+
+        .child-a .child1{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .blush{
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            flex-grow: 1;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            Complex Flexbox Example
+        </div>
+
+        <div class="parent">
+            <div class="child">
+                <h2>First Article</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero facilis quisquam esse similique earum,
+                    dolores iste. Deleniti, perferendis unde nihil enim earum officia a repudiandae incidunt, rerum
+                    atque minus aspernatur nemo sed? Ab omnis distinctio neque vel? Nemo itaque aperiam corporis, dolore
+                    delectus sint, voluptate repellat laborum placeat, impedit totam!
+                </p>
+
+            </div>
+            <div class="child">
+                <h2>First Article</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero facilis quisquam esse similique earum,
+                    dolores iste. Deleniti, perferendis unde nihil enim earum officia a repudiandae incidunt, rerum
+                    atque minus aspernatur nemo sed? Ab omnis distinctio neque vel? Nemo itaque aperiam corporis, dolore
+                    delectus sint, voluptate repellat laborum placeat, impedit totam!
+                </p>
+            </div>
+            <div class="child-a">
+                <div class="child1">
+                    <div>Smile</div>
+                    <div>Laugh</div>
+                    <div>Wink</div>
+                    <div>Shrug</div>
+                    <div class="blush">Blush</div>
+                </div>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero facilis quisquam esse similique earum,
+                    dolores iste. Deleniti, perferendis unde nihil enim earum officia a repudiandae incidunt, rerum
+                    atque minus aspernatur nemo sed? Ab omnis distinctio neque vel? Nemo itaque aperiam corporis, dolore
+                    delectus sint, voluptate repellat laborum placeat, impedit totam!
+                </p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero facilis quisquam esse similique earum,
+                    dolores iste. Deleniti, perferendis unde nihil enim earum officia a repudiandae incidunt, rerum
+                    atque minus aspernatur nemo sed? Ab omnis distinctio neque vel? Nemo itaque aperiam corporis, dolore
+                    delectus sint, voluptate repellat laborum placeat, impedit totam!
+                </p>
+            </div>
+        </div>
+
+
+
+
+    </div>
+</body>
+
+</html>
