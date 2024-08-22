@@ -1,0 +1,10 @@
+1. How do you remove duplicates from an array in JavaScript?
+2. How do you flatten a nested array in JavaScript?
+3. How do you find the largest and smallest numbers in an array?
+4. How do you shuffle an array in JavaScript?
+5. How do you find the intersection of two arrays?
+6. How do you find the union of two arrays?
+7. How do you split an array into chunks of a specific size?
+8. How do you remove a specific element from an array?
+9. How do you merge two arrays and remove duplicates?
+10. How do you check if an array contains a specific value?

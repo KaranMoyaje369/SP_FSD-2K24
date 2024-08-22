@@ -1,0 +1,120 @@
+1. How do you remove duplicates from an array in JavaScript?
+Answer:
+You can remove duplicates from an array using the Set object, which stores unique values, or using the filter method.
+
+
+// Using Set
+const array = [1, 2, 2, 3, 4, 4, 5];
+const uniqueArray = [...new Set(array)];
+console.log(uniqueArray); // [1, 2, 3, 4, 5]
+
+// Using filter and indexOf
+const uniqueArray2 = array.filter((item, index) => array.indexOf(item) === index);
+console.log(uniqueArray2); // [1, 2, 3, 4, 5]
+2. How do you flatten a nested array in JavaScript?
+Answer:
+You can flatten a nested array using the Array.prototype.flat() method or with recursion.
+
+
+const nestedArray = [1, [2, [3, 4], 5], 6];
+
+// Using flat method (specify depth)
+const flattenedArray = nestedArray.flat(2);
+console.log(flattenedArray); // [1, 2, 3, 4, 5, 6]
+
+// Using recursion
+function flattenArray(arr) {
+    return arr.reduce((acc, val) => 
+        Array.isArray(val) ? acc.concat(flattenArray(val)) : acc.concat(val), 
+    []);
+}
+console.log(flattenArray(nestedArray)); // [1, 2, 3, 4, 5, 6]
+3. How do you find the largest and smallest numbers in an array?
+Answer:
+You can use the Math.max() and Math.min() functions with the spread operator (...).
+
+const numbers = [5, 1, 8, 3, 9, 2];
+const max = Math.max(...numbers);
+const min = Math.min(...numbers);
+console.log(max); // 9
+console.log(min); // 1
+4. How do you shuffle an array in JavaScript?
+Answer:
+You can shuffle an array using the Fisher-Yates algorithm.
+
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+const arr = [1, 2, 3, 4, 5];
+console.log(shuffleArray(arr)); // shuffled array
+5. How do you find the intersection of two arrays?
+Answer:
+You can find the intersection of two arrays using the filter method along with includes.
+
+
+const array1 = [1, 2, 3, 4, 5];
+const array2 = [3, 4, 5, 6, 7];
+const intersection = array1.filter(value => array2.includes(value));
+console.log(intersection); // [3, 4, 5]
+6. How do you find the union of two arrays?
+Answer:
+You can find the union of two arrays using the concat method along with the Set object to remove duplicates.
+
+const array1 = [1, 2, 3];
+const array2 = [3, 4, 5];
+const union = [...new Set([...array1, ...array2])];
+console.log(union); // [1, 2, 3, 4, 5]
+7. How do you split an array into chunks of a specific size?
+Answer:
+You can split an array into chunks using a for loop or the reduce method.
+
+function chunkArray(array, size) {
+    const result = [];
+    for (let i = 0; i < array.length; i += size) {
+        result.push(array.slice(i, i + size));
+    }
+    return result;
+}
+
+const arr = [1, 2, 3, 4, 5, 6, 7, 8];
+console.log(chunkArray(arr, 3)); // [[1, 2, 3], [4, 5, 6], [7, 8]]
+8. How do you remove a specific element from an array?
+Answer:
+You can remove a specific element using the filter method or splice if you know the index.
+
+const array = [1, 2, 3, 4, 5];
+const elementToRemove = 3;
+
+// Using filter
+const filteredArray = array.filter(item => item !== elementToRemove);
+console.log(filteredArray); // [1, 2, 4, 5]
+
+// Using splice (find index first)
+const index = array.indexOf(elementToRemove);
+if (index > -1) {
+    array.splice(index, 1);
+}
+console.log(array); // [1, 2, 4, 5]
+9. How do you merge two arrays and remove duplicates?
+Answer:
+You can merge two arrays and remove duplicates using the concat method and Set.
+
+const array1 = [1, 2, 3];
+const array2 = [3, 4, 5];
+const mergedArray = [...new Set(array1.concat(array2))];
+console.log(mergedArray); // [1, 2, 3, 4, 5]
+10. How do you check if an array contains a specific value?
+Answer:
+You can check if an array contains a specific value using the includes method or indexOf.
+
+
+const array = [1, 2, 3, 4, 5];
+console.log(array.includes(3)); // true
+console.log(array.includes(6)); // false
+
+console.log(array.indexOf(3) > -1); // true
+console.log(array.indexOf(6) > -1); // false

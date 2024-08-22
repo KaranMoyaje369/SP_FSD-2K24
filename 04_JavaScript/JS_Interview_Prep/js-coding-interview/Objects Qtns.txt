@@ -1,0 +1,56 @@
+Exercise 1: Create an Object
+Create an object named "person" with the following properties:
+
+Name: "John"
+Age: 30
+Occupation: "Developer"
+
+Exercise 2: Access Object Properties
+Access and print the "name" and "age" properties of the "person" object.
+
+Exercise 3: Modify Object Property
+Change the "occupation" property of the "person" object to "Designer."
+
+Exercise 4: Add a New Property
+Add a new property "location" with the value "New York" to the "person" object.
+
+Exercise 5: Iterate Through Object Properties
+Write a loop to iterate through all the properties of the "person" object and print them.
+
+Exercise 6: Check if a Property Exists
+Check if the "email" property exists in the "person" object and print "Email exists" if it does, or "Email does not exist" if it doesn't.
+
+Exercise 7: Delete a Property
+Delete the "location" property from the "person" object.
+
+Exercise 8: Nested Objects
+Create an object called "car" with properties:
+
+Make: "Toyota"
+Model: "Camry"
+Engine: { Type: "V6", Horsepower: 270 }
+Access and print the "Engine Type" property.
+
+Exercise 9: Object Methods
+Create an object called "circle" with a property "radius" and a method "calculateArea" that calculates 
+the area of the circle (π * radius^2).
+
+Exercise 10: Object Constructor
+Create a constructor function "Person" that can be used to create instances of people with
+ properties "name" and "age."
+ 
+Exercise 11: Object Comparison
+Create two objects, "student1" and "student2," with the same properties (e.g., name, age). Check if these two objects are equal.
+Exercise 12: Object Destructuring
+Use object destructuring to extract the "name" and "age" properties from the "student1" object into separate variables.
+Exercise 13: Object Inheritance
+Create a "Person" object with properties "name" and "age." Then, create a "Student" object that inherits from "Person" and also has a "school" property.
+Exercise 14: Object Method Inheritance
+Extend the "Person" object from the previous exercise with a method called "greet" that prints a greeting message.
+Exercise 15: Object Prototypes
+Create a prototype method called "isAdult" for the "Person" object that returns true if the person is 18 years or older.
+Exercise 16: Object Property Enumeration
+Create an object with properties representing the days of the week. Write a loop to iterate through these properties and print their values.
+Exercise 17: Object Copy
+Create a function that takes an object as an argument and returns a shallow copy of the object.
+

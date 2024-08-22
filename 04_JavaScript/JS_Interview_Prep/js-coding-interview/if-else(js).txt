@@ -1,0 +1,225 @@
+=========================conditional statements======================
+
+
+
+1.given number is even or odd.
+
+2.given value is equal to number=40; with if else if
+
+3.Make a "Good Night" greeting if the hour is greter than 21:00:
+
+4.age is greterthan 18 or not.
+
+5.father and child allowances. if-else.
+
+6. user who has deposited a certain amount of funds into their account 
+                    would then like to buy an item from the store.
+	balanace=700;, jeans=450;
+	
+	if jeans amount lessthan your balance, you can purchase.
+
+
+7.The requirements of this app are as follows:
+
+Grade of 90 and above is an A
+Grade of 80 to 89 is a B
+Grade of 70 to 79 is a C
+Grade of 60 to 69 is a D
+Grade of 59 or below is an F
+
+8.check if the number if positive, negative or zero
+
+9.check if the number is positive, negative or zero(nested if)
+
+10. take a number, given is smaller or not(nested if)
+
+
+11.write js code age is greater than 16 and the ownsCar variable is true, 
+the if block will run. 
+The message printed to the console 
+will be "sathya is old enough to drive and has his own car."
+
+12.write js code even though the isSale variable is set to false,
+ the code inside the if block will still execute because the boyfriendIsPaying
+ variable is set to true.
+
+
+
+
+
+1.A:
+----
+<script>  
+var a=20;  
+if(a%2==0){  
+document.write("a is even number");  
+}  
+else{  
+document.write("a is odd number");  
+}  
+</script> 
+
+2.A:
+----
+
+<script>  
+var a=20;  
+if(a==10){  
+document.write("a is equal to 10");  
+}  
+else if(a==15){  
+document.write("a is equal to 15");  
+}  
+else if(a==20){  
+document.write("a is equal to 20");  
+}  
+else{  
+document.write("a is not equal to 10, 15 or 20");  
+}  
+</script>  
+
+3.A:
+---
+hour=23;
+
+if (hour > 18) {
+  greeting = "Good night";
+  document.write(greeting);
+}
+
+4,A:
+--
+<script type="text/javascript">
+		var age = prompt("Please enter your age");
+		if(age>=18)
+		document.write("You are an adult <br />");
+		if(age<18)
+		document.write("You are NOT an adult <br />");
+	</script>
+	
+5A:
+---
+let shoppingDone = false;
+let childsAllowance;
+
+if (shoppingDone === true) {
+  childsAllowance = 10;
+} else {
+  childsAllowance = 5;
+}
+
+6.A:
+----
+
+// Set balance and price of item
+const balance = 500;
+const jeans = 40;
+
+// Check if there are enough funds to purchase item
+if (jeans <= balance) {
+  console.log("You have enough money to purchase the item!");
+}
+
+
+7.A:
+---
+
+// Set the current grade of the student
+let grade = 87;
+
+// Check if grade is an A, B, C, D, or F
+if (grade >= 90) {
+  console.log("A");
+} else if (grade >= 80) {
+  console.log("B");
+} else if (grade >= 70) {
+  console.log("C");
+} else if (grade >= 60) {
+  console.log("D");
+} else {
+  console.log("F");
+}
+
+
+8.A:
+----
+
+// check if the number if positive, negative or zero
+const number = prompt("Enter a number: ");
+
+
+// check if number is greater than 0
+if (number > 0) {
+    console.log("The number is positive");
+}
+// check if number is 0
+else if (number == 0) {
+  console.log("The number is 0");
+}
+// if number is neither greater than 0, nor zero
+else {
+    console.log("The number is negative");
+}
+
+console.log("The if...else if...else statement is easy");
+
+
+9A:
+---
+// check if the number is positive, negative or zero
+const number = prompt("Enter a number: ");
+
+if (number >= 0) {
+    if (number == 0) {
+        console.log("You entered number 0");
+    } else {
+        console.log("You entered a positive number");
+    }
+} else {
+    console.log("You entered a negative number");
+}
+
+10A:
+---
+
+
+let i = 10;
+ 
+if (i == 10) {  // First if statement
+    if (i < 15) {
+        console.log("i is smaller than 15");
+        // Nested - if statement
+        // Will only be executed if statement above
+        // it is true
+        if (i < 12)
+            console.log("i is smaller than 12 too");
+        else
+            console.log("i is greater than 15");
+    }
+}
+
+11A:
+---
+
+const age = 17;
+const ownsCar = true;
+
+if (age >= 16 && ownsCar) {
+  console.log("Jerry is old enough to drive and has his own car.");
+} else {
+  console.log("Jerry does not drive.");
+}
+
+12A:
+---
+
+const boyfriendIsPaying = true;
+const isSale = false;
+
+if (boyfriendIsPaying || isSale) {
+  console.log("Jesse will go shopping.");
+} else {
+  console.log("Jesse will not go shopping.");
+}
+
+

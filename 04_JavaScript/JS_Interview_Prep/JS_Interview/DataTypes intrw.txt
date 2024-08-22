@@ -1,0 +1,84 @@
+1.What are the primitive data types in JavaScript?
+
+Answer: JavaScript has six primitive data types: string, number, boolean, null, undefined, and symbol (added in ES6). These data types represent single values and are immutable.
+
+2.What is the difference between null and undefined in JavaScript?
+
+Answer: undefined means a variable has been declared but hasn't been assigned a value. null is a value that represents the intentional absence of any object value.
+
+3.What is a data type conversion in JavaScript, and how does it occur?
+
+Answer: Data type conversion, also known as type coercion, is the process of converting a value from one data type to another. It can occur explicitly through functions like Number(), String(), Boolean(), or implicitly when operators and functions expect a different data type.
+
+4.What is the difference between == and === in JavaScript for equality comparison?
+
+Answer: == (loose equality) checks for equality after performing type coercion, while === (strict equality) checks for equality without type coercion. In most cases, it's recommended to use === for accurate comparisons.
+
+5.What is the typeof operator, and how is it used to determine data types in JavaScript?
+
+Answer: The typeof operator is used to determine the data type of a value or variable. For example, typeof myVar will return a string representing the data type of myVar.
+
+6.What are reference data types in JavaScript, and how do they differ from primitive types?
+
+Answer: Reference data types include objects, arrays, and functions. They can store multiple values or references to other values. Unlike primitive types, they are mutable, and their values can be changed.
+
+7.Explain the difference between null and undefined with respect to objects.
+
+Answer: When you access a property that doesn't exist on an object, it returns undefined. If you explicitly set a property to null, it means the property exists but has no value.
+
+8.What is the purpose of the NaN data type in JavaScript, and how can you check for it?
+
+Answer: NaN stands for "Not-a-Number" and is returned when a mathematical operation results in an undefined or unrepresentable value. You can check for NaN using the isNaN() function.
+
+9.What are template literals, and how do they facilitate working with strings and variables in JavaScript?
+
+Answer: Template literals are a feature introduced in ES6 that allows for string interpolation. You can embed variables and expressions within template literals using ${variableName}.
+
+10.Explain the concept of "truthy" and "falsy" values in JavaScript.
+
+Answer: In JavaScript, values that evaluate to true in a boolean context are considered "truthy," and values that evaluate to false are "falsy." Falsy values include false, 0, "", null, undefined, and NaN.
+
+11.How do you check the data type of an array in JavaScript using the Array.isArray() method?
+
+Answer: You can use Array.isArray(myArray) to check if myArray is an array. It returns true if myArray is an array and false if it's not.
+
+12.What is the difference between let, const, and var in terms of data types?
+
+Answer: let and const have block scope and can hold any data type, while var has function scope and can also hold any data type. The difference between let and const is that const is used for variables that won't be reassigned.
+These questions cover a range of topics related to JavaScript data types. Being well-versed in these concepts is crucial for working with data in JavaScript effectively.
+
+13.What is a closure in JavaScript, and how does it relate to data types?
+
+Answer: A closure is a function that "closes over" its lexical scope, capturing and maintaining references to variables from its enclosing scope. Closures are often used to encapsulate data and create private variables in JavaScript.
+
+14.Explain the concept of the prototype chain and how it impacts JavaScript objects.
+
+Answer: JavaScript uses a prototype-based inheritance model. Objects can inherit properties and methods from a prototype object, forming a chain. Understanding this chain is essential for effective object-oriented programming in JavaScript.
+
+15.What is the purpose of the typeof operator when dealing with custom objects and functions?
+
+Answer: The typeof operator is less helpful when dealing with custom objects and functions. It typically returns "object" for custom objects and "function" for functions. To determine specific data types in custom objects and functions, you often need to use other techniques.
+
+16.How does JavaScript handle data types in asynchronous operations, such as with promises and async/await?
+
+Answer: JavaScript maintains the integrity of data types even in asynchronous operations. Promises and async/await ensure that the data types of resolved values remain consistent.
+
+17.Explain the concept of coercion and type conversion in JavaScript when working with operators.
+
+Answer: Coercion is the process of implicitly converting values when using operators. JavaScript performs type conversion to ensure that the operands have compatible data types. Understanding how coercion works is important to avoid unexpected results.
+
+18.What are the data type limitations and considerations when using JSON (JavaScript Object Notation)?
+
+Answer: JSON is a text-based data interchange format. It only supports a limited set of data types: strings, numbers, objects, arrays, booleans, null, and doesn't support custom functions. When using JSON, you must be aware of these limitations.
+
+19.How do you create and work with custom data types and classes in JavaScript using ES6 classes?
+
+Answer: ES6 introduced the class syntax, allowing developers to create custom data types and classes. You can define constructors, methods, and properties within classes, enabling object-oriented programming in JavaScript.
+
+20.What is the purpose of the Symbol data type introduced in ES6, and how is it used in practice?
+
+Answer: Symbol is a primitive data type that provides a unique and immutable value, often used as object property keys to avoid naming collisions in various contexts.
+
+21.Explain how to check for data types and perform type checks in JavaScript using techniques like instanceof and Object.prototype.toString.call().
+
+Answer: The instanceof operator checks if an object is an instance of a specific constructor function. Object.prototype.toString.call(obj) returns a string representation of an object's internal class, helping to determine its data type.

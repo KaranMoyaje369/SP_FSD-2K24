@@ -1,0 +1,93 @@
+1.What is a JavaScript variable?
+Answer: A variable in JavaScript is a named container for storing data. It can hold various types of data, including numbers, strings, objects, and functions.
+
+2.How do you declare a variable in JavaScript?
+
+Answer: You can declare a variable using var, let, or const followed by the variable name. For example:
+
+var x;
+let y;
+const z = 10;
+3.What's the difference between var, let, and const in variable declaration?
+
+Answer: var has function scope, let has block scope, and const has block scope while also being constant (its value cannot be reassigned). let and const are typically preferred over var for better scoping and immutability.
+
+4.What is variable hoisting in JavaScript?
+
+Answer: Variable hoisting is a JavaScript behavior where variable declarations are moved to the top of their containing function or block scope during compilation. This means you can use a variable before declaring it, but it will be undefined until the declaration.
+
+5.What is the difference between null and undefined in JavaScript?
+
+Answer: undefined means a variable has been declared but hasn't been assigned a value. null is a value that represents the intentional absence of any object value.
+
+6.How do you check if a variable is undefined in JavaScript?
+
+Answer: You can use a strict equality comparison (===) to check if a variable is undefined, like this:
+
+if (myVar === undefined) {
+  // myVar is undefined
+}
+
+7.How do you check the data type of a variable in JavaScript?
+
+Answer: You can use the typeof operator to check the data type of a variable, like this:
+
+typeof myVar;
+
+8.What is variable scope in JavaScript?
+
+Answer: Scope refers to the context in which a variable is declared and where it can be accessed. JavaScript has global scope, function scope (for var), and block scope (for let and const).
+
+9.What is a closure in JavaScript, and how does it relate to variables?
+
+Answer: A closure is a function that has access to the variables of its outer (enclosing) function. It "closes over" these variables, allowing them to persist even after the outer function has completed execution.
+
+10.What is the purpose of the this keyword in JavaScript, and how does it relate to variables?
+
+Answer: The this keyword refers to the current object, which can vary in different contexts. It is used to access and manipulate object properties and methods. The value of this depends on how a function is called, and it can change dynamically.
+
+11.Can you change the value of a const variable in JavaScript?
+
+Answer: No, you cannot reassign the value of a const variable once it's been initialized. It remains constant.
+
+12.How can you make a variable globally accessible in JavaScript?
+
+Answer: You can declare a variable in the global scope, outside of any functions, using var or by attaching it to the global object (e.g., window in the browser) for accessibility throughout your code.
+These are some common JavaScript variable-related interview questions and answers. Be prepared to discuss these topics in detail during your interview.
+
+
+13.What is variable shadowing in JavaScript, and why should you be aware of it?
+
+Answer: Variable shadowing occurs when a variable declared within a more localized scope has the same name as a variable in an outer scope. It can lead to unexpected behavior because the inner variable takes precedence, potentially causing bugs.
+
+14.Explain the concept of variable immutability. How can you make an object immutable in JavaScript?
+
+Answer: Immutability means that a variable's value cannot be changed after it's been assigned. To make an object immutable in JavaScript, you can use techniques like Object.freeze, or create a new object with the desired changes instead of modifying the existing one.
+
+15.What are template literals in JavaScript, and how do they differ from regular strings when it comes to variables?
+
+Answer: Template literals (enclosed in backticks) allow for string interpolation, making it easy to embed variables within a string using ${variableName}. Regular strings require concatenation or other methods to achieve the same result.
+
+16.Explain the concept of variable destructuring in JavaScript.
+
+Answer: Variable destructuring is a technique that allows you to extract values from objects and arrays into separate variables. It's a concise and convenient way to access and work with complex data structures.
+
+17.What is the Temporal Dead Zone (TDZ) in JavaScript, and how does it relate to variables declared with let and const?
+
+Answer: The Temporal Dead Zone (TDZ) is the time between entering scope and the actual declaration of a variable. Variables declared with let and const are not accessible in this zone, which helps catch reference errors early during runtime.
+
+18.What are global variables, and why should they be used sparingly in JavaScript?
+
+Answer: Global variables are accessible throughout your entire codebase. Using them excessively can lead to naming conflicts, maintenance issues, and make code harder to understand. It's best to limit the use of global variables and employ appropriate scoping techniques.
+
+19.Explain the concept of lexical scoping in JavaScript and how it affects variable resolution.
+
+Answer: Lexical scoping means that variable resolution is determined by the location of variables in the source code rather than the execution context. Variables are resolved by looking at the scope in which they are defined, not where they are called.
+
+20.How does JavaScript handle memory management for variables and objects?
+
+Answer: JavaScript uses automatic memory management through garbage collection. When a variable or object is no longer reachable, it becomes eligible for garbage collection, freeing up memory resources.
+
+21.What are IIFE (Immediately Invoked Function Expressions), and how do they relate to variables?
+
+Answer: IIFE is a JavaScript design pattern that involves wrapping a function expression in parentheses and immediately invoking it. This can be used to create a new scope, helping avoid variable naming conflicts and isolating variables from the global scope.

@@ -1,0 +1,15 @@
+1.Create string and display the string characters using indexing? 
+2.Create the string and display the characters of the string using while loop? 
+3.Create the string and the display the characters of the string using for loop? 
+4.Create the string and the display the characters of the string using for in loop? 
+5.Create the string and the display the characters of the string using for of loop? 
+6.Create the string and count how many letters in the string? 
+7.Create the string and count the how many characters of the string without using length? 
+8.Create the string and count the how many characters of the string are vowel? 
+9.Create the string and count the how many characters of the string are consonant? 
+10.Create the string and count how many spaces in the string? 
+11.Print the characters of the string in the reverse order? 
+12.Check the given strings are same or not? 
+13.Check the given string and reverse of the same string same or not? 
+14.Find the number of characters is repeated and it count in the string? 
+15.Replace space of the string with "given number from user" in the string?

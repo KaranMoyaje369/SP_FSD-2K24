@@ -1,0 +1,214 @@
+Exercise 1: Write a function that greets the user by name.
+
+
+function greet(name) {
+    return "Hello, " + name + "!";
+}
+
+console.log(greet("John")); // Output: "Hello, John!"
+
+Exercise 2: Write a function that calculates the square of a number.
+
+
+function square(number) {
+    return number * number;
+}
+
+console.log(square(5)); // Output: 25
+
+Exercise 3: Write a function that checks if a number is even.
+
+function isEven(number) {
+    return number % 2 === 0;
+}
+
+console.log(isEven(4)); // Output: true
+console.log(isEven(7)); // Output: false
+
+Exercise 4: Write a function that concatenates two strings with a space in between.
+
+function concatenateStrings(str1, str2) {
+    return str1 + " " + str2;
+}
+
+console.log(concatenateStrings("Hello", "World")); // Output: "Hello World"
+
+
+Exercise 5: Write a function that returns the factorial of a positive integer.
+
+
+function factorial(n) {
+    if (n === 0 || n === 1) {
+        return 1;
+    }
+    return n * factorial(n - 1);
+}
+
+console.log(factorial(5)); // Output: 120
+
+Exercise 6: Write a function that converts a temperature in Celsius to Fahrenheit.
+
+
+function celsiusToFahrenheit(celsius) {
+    return (celsius * 9/5) + 32;
+}
+
+console.log(celsiusToFahrenheit(25)); // Output: 77
+
+Exercise 7: Write a function that checks if a given string is empty.
+
+function isEmptyString(str) {
+    return str === "";
+}
+
+console.log(isEmptyString("")); // Output: true
+console.log(isEmptyString("Hello")); // Output: false
+
+Exercise 8: Write a function that takes two numbers and returns the larger number.
+
+
+function findLargerNumber(a, b) {
+    if (a > b) {
+        return a;
+    } else {
+        return b;
+    }
+}
+
+console.log(findLargerNumber(8, 5)); // Output: 8
+
+
+Exercise 9: Write a function that checks if a given number is positive, negative, or zero.
+
+
+function checkNumberSign(number) {
+    if (number > 0) {
+        return "Positive";
+    } else if (number < 0) {
+        return "Negative";
+    } else {
+        return "Zero";
+    }
+}
+
+console.log(checkNumberSign(5));  // Output: "Positive"
+console.log(checkNumberSign(-3)); // Output: "Negative"
+console.log(checkNumberSign(0));  // Output: "Zero"
+
+Exercise 10: Write a function that calculates the area of a rectangle given its length and width.
+
+function calculateRectangleArea(length, width) {
+    return length * width;
+}
+
+console.log(calculateRectangleArea(4, 5)); // Output: 20
+
+Exercise 11: Write a function that checks if a given string is a palindrome (reads the same forwards and backwards).
+
+
+function isPalindrome(str) {
+    str = str.toLowerCase().replace(/[^a-z]/g, ''); // Remove non-alphabetic characters and convert to lowercase
+    const reversedStr = str.split('').reverse().join('');
+    return str === reversedStr;
+}
+
+console.log(isPalindrome("racecar")); // Output: true
+console.log(isPalindrome("hello"));   // Output: false
+
+Exercise 12: Write a function that counts the number of vowels in a given string (case-insensitive).
+
+function countVowels(str) {
+    str = str.toLowerCase();
+    const vowels = "aeiou";
+    let count = 0;
+    for (let i = 0; i < str.length; i++) {
+        if (vowels.indexOf(str[i]) !== -1) {
+            count++;
+        }
+    }
+    return count;
+}
+
+console.log(countVowels("Hello, World!")); // Output: 3
+
+Exercise 13: Write a function that returns the reverse of a given array.
+
+
+function reverseArray(arr) {
+    return arr.reverse();
+}
+
+console.log(reverseArray([1, 2, 3, 4, 5])); // Output: [5, 4, 3, 2, 1]
+
+Exercise 14: Write a function that calculates the area of a circle given its radius.
+
+
+function calculateCircleArea(radius) {
+    return Math.PI * radius * radius;
+}
+
+console.log(calculateCircleArea(3)); // Output: approximately 28.27
+
+Exercise 15: Write a function that takes an array of numbers as a parameter and returns the sum of all the even numbers in the array.
+
+
+function sumEvenNumbers(numbers) {
+    let sum = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] % 2 === 0) {
+            sum += numbers[i];
+        }
+    }
+    return sum;
+}
+
+console.log(sumEvenNumbers([1, 2, 3, 4, 5])); // Output: 6
+
+Exercise 16: Write a function that takes a sentence as a parameter and returns the number of words in the sentence.
+
+
+function countWords(sentence) {
+    const words = sentence.split(" ");
+    return words.length;
+}
+
+console.log(countWords("This is a sample sentence.")); // Output: 5
+
+Exercise 17: Write a function that checks if a given year is a leap year.
+
+
+function isLeapYear(year) {
+    if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+console.log(isLeapYear(2020)); // Output: true
+console.log(isLeapYear(2022)); // Output: false
+
+Exercise 18: Write a function that reverses a string without using the built-in reverse method.
+
+
+function reverseString(str) {
+    let reversed = "";
+    for (let i = str.length - 1; i >= 0; i--) {
+        reversed += str[i];
+    }
+    return reversed;
+}
+
+console.log(reverseString("hello")); // Output: "olleh"
+
+Exercise 19: Write a function that takes an array of strings as a parameter and returns a new array with only the strings that have more than 5 characters.
+
+function filterLongStrings(strings) {
+    return strings.filter(function(str) {
+        return str.length > 5;
+    });
+}
+
+console.log(filterLongStrings(["apple", "banana", "cherry", "date", "elderberry"])); // Output: ["banana", "cherry", "elderberry"]
+
+

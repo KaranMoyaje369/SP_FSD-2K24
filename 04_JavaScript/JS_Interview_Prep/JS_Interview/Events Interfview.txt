@@ -1,0 +1,105 @@
+1. What is an event in JavaScript?
+Answer: An event in JavaScript is an action or occurrence that happens in the browser, such as a user clicking a button, loading a page, or pressing a key. Events are a key way to make web pages interactive, as they allow JavaScript to respond to user actions or other occurrences.
+
+2. How do you add an event listener to an element in JavaScript?
+Answer: You can add an event listener to an element using the addEventListener() method. This method allows you to specify the event type and the function that should be executed when the event occurs.
+var button = document.getElementById("myButton");
+button.addEventListener("click", function() {
+    alert("Button was clicked!");
+});
+3. What is the difference between onclick and addEventListener()?
+Answer:
+
+onclick is a property that allows you to define a single event handler for the click event. If you assign a new function to onclick, it replaces the previous one.
+addEventListener() allows you to add multiple event listeners for the same event type on the same element without overwriting existing handlers.
+
+// Using onclick
+button.onclick = function() { alert("Clicked!"); };
+
+// Using addEventListener
+button.addEventListener("click", function() { alert("First handler!"); });
+button.addEventListener("click", function() { alert("Second handler!"); });
+4. What is event bubbling in JavaScript?
+Answer: Event bubbling is a phase in the event propagation process where an event starts from the target element and then bubbles up through the DOM tree to the root. For example, if a click event occurs on a button inside a div, the event first triggers on the button and then bubbles up to the div and then to higher elements like the body and the document.
+
+5. What is event capturing in JavaScript?
+Answer: Event capturing, also known as event trickling, is the opposite of event bubbling. In event capturing, the event is first captured by the outermost element (the root) and then propagates down to the target element. You can set the useCapture parameter to true in addEventListener() to trigger event capturing.
+
+element.addEventListener("click", function() {
+    console.log("Captured!");
+}, true);
+6. What is the difference between e.target and e.currentTarget in event handling?
+Answer:
+
+e.target refers to the element that triggered the event (the element that was clicked).
+e.currentTarget refers to the element to which the event listener is attached.
+
+var div = document.getElementById("myDiv");
+div.addEventListener("click", function(e) {
+    console.log("Target:", e.target); // The actual element clicked
+    console.log("Current Target:", e.currentTarget); // The element with the event listener
+});
+7. How can you stop event propagation?
+Answer: You can stop event propagation by using the stopPropagation() method. This method prevents the event from bubbling up or trickling down through the DOM tree.
+
+var button = document.getElementById("myButton");
+button.addEventListener("click", function(event) {
+    event.stopPropagation(); // Stops the event from propagating further
+    alert("Event propagation stopped!");
+});
+8. What is preventDefault() and when would you use it?
+Answer: The preventDefault() method prevents the default action of an event from occurring. For example, it can prevent a form from being submitted or a link from navigating to a new page.
+
+var link = document.getElementById("myLink");
+link.addEventListener("click", function(event) {
+    event.preventDefault(); // Prevents the default link behavior
+    alert("Default action prevented!");
+});
+9. What is an anonymous function in the context of event handlers?
+Answer: An anonymous function is a function that is defined without a name. In the context of event handlers, anonymous functions are often used directly as event listeners without being stored in a variable.
+
+button.addEventListener("click", function() {
+    console.log("Button clicked!");
+});
+10. What is event delegation and why is it useful?
+Answer: Event delegation is a technique where you add a single event listener to a parent element instead of multiple event listeners to child elements. It is useful for handling events on dynamic elements that may be added to the DOM later and for improving performance by reducing the number of event listeners in the DOM.
+document.getElementById("parent").addEventListener("click", function(event) {
+    if (event.target && event.target.matches("li.item")) {
+        console.log("List item clicked:", event.target);
+    }
+});
+11. How do you remove an event listener?
+Answer: You can remove an event listener using the removeEventListener() method. This method requires the same parameters that were used to add the event listener.
+function handleClick() {
+    alert("Button clicked!");
+}
+
+button.addEventListener("click", handleClick);
+button.removeEventListener("click", handleClick);
+12. What is this in the context of an event handler?
+Answer: In the context of an event handler, this refers to the element to which the event handler is attached. However, the value of this can change depending on the context, especially if the handler is an arrow function, in which case this refers to the enclosing lexical context.
+
+button.addEventListener("click", function() {
+    console.log(this); // Refers to the button element
+});
+13. What are the phases of event propagation?
+Answer: Event propagation consists of three phases:
+
+Capturing phase: The event starts from the window and propagates down to the target element.
+Target phase: The event reaches the target element.
+Bubbling phase: The event bubbles up from the target element back to the window.
+14. Can you bind multiple event handlers to the same event on an element?
+Answer: Yes, you can bind multiple event handlers to the same event on an element using addEventListener(). All the event handlers will be executed in the order they were added.
+
+button.addEventListener("click", function() { console.log("First handler"); });
+button.addEventListener("click", function() { console.log("Second handler"); });
+15. What is a synthetic event in JavaScript?
+Answer: Synthetic events are custom events created and dispatched in JavaScript to simulate real user events. These events are useful for testing and for triggering custom behaviors programmatically.
+
+var event = new Event("build");
+
+// Listen for the event
+elem.addEventListener("build", function (e) { console.log("build event triggered"); });
+
+// Dispatch the event
+elem.dispatchEvent(event);

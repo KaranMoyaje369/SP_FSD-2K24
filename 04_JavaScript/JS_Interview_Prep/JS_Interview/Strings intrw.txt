@@ -1,0 +1,100 @@
+1.What is a JavaScript string?
+
+Answer: A JavaScript string is a sequence of characters that represent text. Strings are one of the primitive data types in JavaScript.
+
+2.How do you create a string in JavaScript?
+
+Answer: You can create a string by enclosing characters in single quotes (' '), double quotes (" "), or backticks (` `), like this:
+
+const singleQuotes = 'Hello, World!';
+const doubleQuotes = "Hello, World!";
+const backticks = `Hello, World!`;
+
+3.Explain the concept of string immutability in JavaScript.
+
+Answer: String immutability means that once a string is created, it cannot be changed. You can create new strings based on existing ones, but you cannot modify the original string in place.
+
+4.What are escape sequences in JavaScript strings, and how are they used?
+
+Answer: Escape sequences are special characters preceded by a backslash. They are used to include characters that are difficult to type or to represent control characters, like \n for a newline or \" to include double quotes within a string.
+
+5.How do you find the length of a string in JavaScript, and what is the purpose of the length property?
+
+Answer: You can find the length of a string using the length property, like this:
+
+const text = "Hello, World!";
+const length = text.length; // length will be 13
+
+6.Explain the difference between charAt() and bracket notation for accessing characters in a string.
+
+Answer: charAt() is a method that returns the character at a specific index in a string. Bracket notation is more common and provides the same functionality:
+
+const text = "Hello, World!";
+console.log(text.charAt(0)); // "H"
+console.log(text[0]); // "H"
+
+7.What is string interpolation, and how is it achieved in JavaScript?
+
+Answer: String interpolation is the process of embedding expressions or variables within a string. In JavaScript, you can use template literals (backticks) to achieve string interpolation, like this:
+
+const name = "Alice";
+const greeting = `Hello, ${name}!`;
+
+8.Explain the purpose of the String.fromCharCode() and String.fromCodePoint() methods in JavaScript.
+
+Answer: String.fromCharCode() is used to create a string from a sequence of Unicode values, while String.fromCodePoint() creates a string from a single Unicode code point.
+
+9.What is the split() method in JavaScript, and how does it work with strings?
+
+Answer: The split() method is used to split a string into an array of substrings based on a specified delimiter. For example:
+
+const text = "apple,banana,cherry";
+const fruits = text.split(",");
+
+10.How do you convert a string to lowercase or uppercase in JavaScript?
+
+Answer: You can use the toLowerCase() and toUpperCase() methods to convert a string to lowercase and uppercase, respectively.
+
+11.What is the purpose of the substr() and substring() methods in JavaScript strings, and how do they differ?
+
+Answer: Both substr() and substring() are used to extract a portion of a string. The key difference is in how they accept arguments. substr() takes a starting index and a length, while substring() takes two indices and returns the characters between them.
+
+12.What are regular expressions (regex) in JavaScript, and how are they used with strings?
+
+Answer: Regular expressions are patterns that allow you to match and manipulate strings based on specific criteria. In JavaScript, you can use the RegExp object or regex literals to work with regular expressions. They are often used for tasks like pattern matching, searching, and replacing text within strings.
+
+13.Explain the concept of string encoding and character sets in JavaScript.
+
+Answer: String encoding refers to the representation of characters as bytes in memory or files. JavaScript uses the Unicode character set, which supports a wide range of characters from various languages and symbols.
+
+14.What are string templates in JavaScript (tagged templates), and how do they work?
+
+Answer: String templates are a feature introduced in ES6 that allows you to process string literals with a function called a "tag" function. The tag function receives the string parts and expressions and can process or manipulate them before returning the final string.
+
+15.How can you reverse a string in JavaScript using various techniques?
+
+Answer: You can reverse a string using techniques such as using the split() and reverse() methods, looping through the string, or employing recursion.
+
+16.Explain the concept of string interning in JavaScript.
+
+Answer: String interning is an optimization technique in JavaScript that allows the interpreter to store only one copy of each distinct string. This can save memory and improve performance when comparing or using strings.
+
+17.What are string methods like trim(), startsWith(), and endsWith() used for in JavaScript?
+
+Answer: trim() removes leading and trailing whitespace from a string. startsWith() and endsWith() check if a string starts or ends with a specified substring.
+
+18.What is the purpose of the String.raw method in JavaScript, and when is it commonly used?
+
+Answer: String.raw is a tag function that returns the raw, unprocessed string content of a template literal. It's often used when working with regular expressions or handling special characters.
+
+19.Explain the concept of string localization and internationalization (i18n) in JavaScript.
+
+Answer: String localization and internationalization involve adapting applications to different languages, regions, and cultures. JavaScript provides tools and libraries, such as Intl, to assist with i18n tasks, such as formatting dates, times, and numbers, and translating strings.
+
+20.What is the purpose of the String.prototype.indexOf() and String.prototype.lastIndexOf() methods in JavaScript?
+
+Answer: indexOf() is used to find the first occurrence of a substring within a string and returns its index. lastIndexOf() finds the last occurrence of a substring within a string and returns its index.
+
+21.Explain the concept of string memory management in JavaScript and the differences between primitive and reference values for strings.
+
+Answer: JavaScript handles string memory management automatically. Primitive string values are immutable and stored by value, while reference string values (strings created using the String object) are mutable and stored by reference.

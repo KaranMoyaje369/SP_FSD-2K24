@@ -1,0 +1,83 @@
+1.What is a JavaScript function?
+
+Answer: A JavaScript function is a reusable block of code that performs a specific task or calculates a value. It is defined using the function keyword and can be invoked (called) with or without parameters.
+
+2.What is the difference between function declarations and function expressions in JavaScript?
+
+Answer: Function declarations are hoisted and can be called before they are declared in the code. Function expressions are not hoisted and must be defined before they are called.
+
+3.Explain the concept of anonymous functions in JavaScript.
+
+Answer: Anonymous functions are functions without a specified name. They are often used as arguments in other functions, such as callbacks or immediately invoked function expressions (IIFE).
+
+4.What is a callback function, and why are they important in JavaScript?
+
+Answer: A callback function is a function passed as an argument to another function and is executed at a later time, often in response to an event or asynchronous operation. Callbacks are crucial for handling asynchronous tasks in JavaScript.
+
+5.What is a higher-order function in JavaScript?
+
+Answer: A higher-order function is a function that takes one or more functions as arguments and/or returns a function as its result. They are commonly used for tasks like mapping, filtering, and reducing arrays.
+
+6.Explain the difference between function and => (arrow function) syntax in JavaScript.
+
+Answer: Arrow functions are a concise way to write functions. They have a shorter syntax and share the same lexical this as their surrounding code, whereas the function keyword creates functions with their own this context.
+
+7.What is function scope and how does it differ from block scope in JavaScript?
+
+Answer: Function scope refers to variables declared inside a function using the var keyword. Block scope refers to variables declared within blocks, typically using let and const. Variables with function scope are only accessible within that function, while block-scoped variables are limited to their block.
+
+8.What is a closure in JavaScript, and how does it relate to functions?
+
+Answer: A closure is a function that captures and maintains references to variables from its containing (enclosing) scope even after that scope has exited. Closures are powerful for data encapsulation and creating private variables.
+
+9.What is the purpose of the this keyword in JavaScript functions, and how does it work?
+
+Answer: The this keyword refers to the current execution context and is often used to access object properties and methods. Its value depends on how a function is called, and it can change dynamically.
+
+10.What are IIFE (Immediately Invoked Function Expressions), and why are they used in JavaScript?
+
+Answer: IIFE is a design pattern where a function is defined and immediately invoked. They create a new scope, which is useful for isolating variables, avoiding naming conflicts, and controlling the exposure of variables to the global scope.
+
+11.Explain the concept of function currying in JavaScript.
+
+Answer: Function currying is the process of transforming a function that takes multiple arguments into a series of functions that each takes one argument. This allows for partial function application and more flexible function composition.
+12.What is the role of the arguments object in JavaScript functions, and how is it used?
+
+Answer: The arguments object is an array-like object available within the scope of a function that contains all the arguments passed to that function, regardless of the number of named parameters. It's often used in functions where the number of arguments is variable.
+13.These questions cover a range of topics related to JavaScript functions, from basic function concepts to more advanced topics like closures and arrow functions. Understanding functions is fundamental to becoming proficient in JavaScript.
+
+Explain the concept of function composition in JavaScript and how it can be achieved.
+
+Answer: Function composition is a technique for combining multiple functions to produce a new function. It is commonly used to create complex operations by chaining together simpler functions.
+14.What is the purpose of the bind() method in JavaScript functions, and how does it work?
+
+Answer: The bind() method is used to create a new function that, when called, has a specific value for the this keyword. It's often used to bind functions to specific objects or contexts.
+15.What is the difference between call and apply methods when invoking functions in JavaScript?
+
+Answer: Both call() and apply() are used to invoke functions with a specific this context. The key difference is in how arguments are passed: call() accepts arguments as a comma-separated list, while apply() takes them as an array.
+16.Explain the concept of recursion in JavaScript functions and provide an example.
+
+Answer: Recursion is the process of a function calling itself. It's often used to solve problems that can be broken down into smaller, similar subproblems. An example is the factorial function:
+
+function factorial(n) {
+  if (n === 0) {
+    return 1;
+  } else {
+    return n * factorial(n - 1);
+  }
+}
+17.What is a generator function in JavaScript, and how does it differ from regular functions?
+
+Answer: A generator function is a special type of function that can pause its execution and resume it later. It uses the function* syntax and yield statements to control its execution flow. Regular functions execute to completion, while generator functions can yield control back to the caller.
+18.What is the purpose of the async and await keywords in JavaScript functions, and how do they work with Promises?
+
+Answer: The async keyword is used to define an asynchronous function that always returns a Promise. await is used within an async function to pause execution until a Promise is resolved. This provides a more synchronous-like way to work with asynchronous code.
+19.Explain the concept of first-class functions in JavaScript and how it relates to functions as values.
+
+Answer: JavaScript treats functions as first-class citizens, meaning they can be treated like any other value. You can assign functions to variables, pass them as arguments, and return them from other functions.
+20.What is the purpose of the arguments.callee property, and why is it considered deprecated?
+
+Answer: The arguments.callee property refers to the currently executing function within the arguments object. It's considered deprecated because it can negatively impact performance, and its usage can often be avoided by using named function expressions or arrow functions.
+21.How can you create private variables and methods in JavaScript functions, and why is encapsulation important?
+
+Answer: Encapsulation involves hiding the internal details of a function and exposing only the necessary parts. Private variables and methods can be achieved through closures or ES6 class private fields. Encapsulation helps prevent unintended modification of data and ensures more robust code.

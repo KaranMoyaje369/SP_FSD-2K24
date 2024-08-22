@@ -1,0 +1,99 @@
+1. What is the DOM?
+Answer: The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects, which can be manipulated with JavaScript.
+
+2. How do you select an element by its ID in JavaScript?
+Answer: You can select an element by its ID using the getElementById() method. For example:
+
+var element = document.getElementById("myElement");
+3. What is the difference between querySelector() and querySelectorAll()?
+Answer:
+
+querySelector() returns the first element that matches the specified CSS selector(s).
+querySelectorAll() returns a NodeList containing all elements that match the specified CSS selector(s).
+
+var singleElement = document.querySelector(".myClass");
+var allElements = document.querySelectorAll(".myClass");
+4. How do you add an event listener to an element?
+Answer: You can add an event listener to an element using the addEventListener() method. For example, to add a click event listener:
+
+var button = document.getElementById("myButton");
+button.addEventListener("click", function() {
+    alert("Button clicked!");
+});
+5. How can you create a new element in the DOM?
+Answer: You can create a new element using the document.createElement() method. For example, to create a new <div> element:
+
+var newDiv = document.createElement("div");
+6. What is the difference between innerHTML and textContent?
+Answer:
+
+innerHTML returns or sets the HTML content inside an element, including any HTML tags.
+textContent returns or sets the text content of an element and its descendants, without any HTML tags.
+
+var element = document.getElementById("myElement");
+element.innerHTML = "<strong>Bold Text</strong>";
+element.textContent = "Plain Text";
+7. How do you remove an element from the DOM?
+Answer: You can remove an element from the DOM using the removeChild() method on its parent element or by using the remove() method directly on the element.
+
+var element = document.getElementById("myElement");
+element.parentNode.removeChild(element); // Using removeChild
+
+// Or directly
+element.remove();
+8. What is event delegation?
+Answer: Event delegation is a technique where you add a single event listener to a parent element instead of multiple event listeners to child elements. This leverages event bubbling and allows you to handle events for dynamic elements efficiently.
+
+document.getElementById("parentElement").addEventListener("click", function(event) {
+    if (event.target && event.target.matches("li.item")) {
+        console.log("List item clicked:", event.target);
+    }
+});
+9. How do you change the style of an element using JavaScript?
+Answer: You can change the style of an element using the style property. For example, to change the background color:
+
+var element = document.getElementById("myElement");
+element.style.backgroundColor = "blue";
+10. What is the difference between e.target and e.currentTarget in event handling?
+Answer:
+
+e.target refers to the element that triggered the event (i.e., the element that was clicked).
+e.currentTarget refers to the element to which the event handler is attached.var parentElement = document.getElementById("parentElement");
+parentElement.addEventListener("click", function(e) {
+    console.log("Target:", e.target);          // The actual element clicked
+    console.log("Current Target:", e.currentTarget);  // The element with the event listener
+});
+11. How do you prevent the default action of an event in JavaScript?
+Answer: You can prevent the default action of an event using the preventDefault() method. For example, to prevent a link from navigating:
+
+var link = document.getElementById("myLink");
+link.addEventListener("click", function(event) {
+    event.preventDefault();
+    alert("Link click prevented!");
+});
+12. What is the purpose of the DOMContentLoaded event?
+Answer: The DOMContentLoaded event is fired when the initial HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading. It is useful for running scripts as soon as the DOM is ready.
+
+document.addEventListener("DOMContentLoaded", function() {
+    console.log("DOM fully loaded and parsed");
+});
+13. How do you append a child element to a parent element in the DOM?
+Answer: You can append a child element using the appendChild() method. For example:
+
+var parent = document.getElementById("parentElement");
+var child = document.createElement("div");
+child.textContent = "I am a child element";
+parent.appendChild(child);
+14. What are some common ways to optimize DOM manipulation?
+Answer:
+
+Minimize reflows and repaints: Batch DOM updates, use documentFragment, and avoid inline styles.
+Use event delegation: Instead of adding multiple event listeners to similar elements, add one to a common parent.
+Cache DOM references: Avoid repeatedly querying the DOM for the same elements.
+Use requestAnimationFrame for animations to ensure smooth rendering.
+15. How do you clone a DOM element?
+Answer: You can clone a DOM element using the cloneNode() method. For example:
+
+var element = document.getElementById("myElement");
+var clone = element.cloneNode(true); // true means deep clone (with child elements)
+document.body.appendChild(clone);

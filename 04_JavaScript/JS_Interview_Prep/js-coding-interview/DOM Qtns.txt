@@ -1,0 +1,36 @@
+Exercise 1: Change Text Content
+Change the text content of a <p> element with the id "demo" to "Hello, DOM!".
+Exercise 2: Change Element Style
+Change the background color of a <div> element with the id "myDiv" to blue.
+Exercise 3: Add a New Element
+Create a new <p> element with the text "This is a new paragraph." and append it to a <div> element with the id "container".
+Exercise 4: Remove an Element
+Remove a <p> element with the id "removeMe" from the document.
+Exercise 5: Event Handling
+Create a button that changes the text content of a <p> element when clicked.
+Exercise 1: Select by ID
+Select the element with the ID "myElement" and change its text content to "I was selected by ID."
+Exercise 2: Select by Class Name
+Select all elements with the class name "myClass" and change their text content to "I was selected by class name."
+Exercise 3: Select by Tag Name
+Select all <p> elements and change their text content to "I was selected by tag name."
+Exercise 4: Select by Query Selector
+Select the first element with the class "special" and change its text content to "I was selected by query selector."
+Exercise 5: Select and Change Multiple Elements
+Select all elements with the class "highlight" and change their background color to yellow.
+Exercise 1: Change Text Color
+Change the text color of a <p> element with the ID "myText" to red.
+Exercise 2: Change Background Color
+Change the background color of a <div> element with the ID "myDiv" to green.
+Exercise 3: Change Font Size
+Change the font size of all <p> elements with the class "text" to 20 pixels.
+Exercise 4: Add a CSS Class
+Add a CSS class "highlight" to a <p> element with the ID "highlightMe" to change its text color to blue.
+Exercise 5: Remove a CSS Class
+Remove a CSS class "inactive" from a <button> element with the ID "activateButton" to make it active.
+Exercise 1: Set an Attribute
+Set the "src" attribute of an <img> element with the ID "myImage" to a new image URL.
+Exercise 2: Get an Attribute
+Get and display the "href" attribute of a <a> element with the ID "myLink" in an alert.
+Exercise 3: Remove an Attribute
+Remove the "disabled" attribute from a <button> element with the ID "myButton" to enable it.

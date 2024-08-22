@@ -1,0 +1,174 @@
+1. What is an object in JavaScript?
+Answer: An object in JavaScript is a collection of key-value pairs where the keys are strings (or symbols) and the values can be of any data type. Objects are used to store data and functions, and they allow you to group related data together.
+
+var person = {
+    name: "John",
+    age: 30,
+    greet: function() {
+        console.log("Hello, " + this.name);
+    }
+};
+2. How do you create an object in JavaScript?
+Answer: You can create an object in JavaScript using object literals, the Object constructor, or by defining a class.
+
+var car = { make: "Toyota", model: "Corolla", year: 2020 };
+Using Object constructor:
+
+var car = new Object();
+car.make = "Toyota";
+car.model = "Corolla";
+car.year = 2020;
+Using a class:
+javascript
+Copy code
+class Car {
+    constructor(make, model, year) {
+        this.make = make;
+        this.model = model;
+        this.year = year;
+    }
+}
+var car = new Car("Toyota", "Corolla", 2020);
+3. How do you access and modify object properties in JavaScript?
+Answer: You can access and modify object properties using dot notation or bracket notation.
+
+Dot notation:
+
+console.log(person.name);  // Access
+person.age = 31;           // Modify
+Bracket notation:
+
+console.log(person["name"]); // Access
+person["age"] = 31;          // Modify
+4. What is the difference between Object.keys(), Object.values(), and Object.entries()?
+Answer:
+
+Object.keys() returns an array of the object's own enumerable property names (keys).
+Object.values() returns an array of the object's own enumerable property values.
+Object.entries() returns an array of the object's own enumerable key-value pairs as arrays.var person = { name: "John", age: 30 };
+console.log(Object.keys(person));   // ["name", "age"]
+console.log(Object.values(person)); // ["John", 30]
+console.log(Object.entries(person)); // [["name", "John"], ["age", 30]]
+5. What is a prototype in JavaScript?
+Answer: A prototype is an object from which other objects inherit properties and methods. Every JavaScript object has a prototype, and objects can inherit properties and methods from their prototype. This is the basis for prototypal inheritance in JavaScript.
+function Person(name) {
+    this.name = name;
+}
+Person.prototype.greet = function() {
+    console.log("Hello, " + this.name);
+};
+var person1 = new Person("John");
+person1.greet(); // "Hello, John"
+6. What is the difference between for...in and for...of loops when iterating over objects?
+Answer:
+
+for...in iterates over the enumerable properties (keys) of an object.
+for...of is used to iterate over iterable objects like arrays, not plain objects.
+
+var person = { name: "John", age: 30 };
+for (var key in person) {
+    console.log(key); // Outputs "name" and "age"
+}
+
+var arr = [10, 20, 30];
+for (var value of arr) {
+    console.log(value); // Outputs 10, 20, 30
+}
+7. How do you clone an object in JavaScript?
+Answer: You can clone an object in JavaScript using the Object.assign() method or the spread operator (...).
+
+Using Object.assign():
+
+var obj = { a: 1, b: 2 };
+var clone = Object.assign({}, obj);
+Using the spread operator:
+
+var clone = { ...obj };
+8. What is the difference between deep and shallow cloning in JavaScript?
+Answer:
+
+Shallow cloning creates a new object, but nested objects or arrays are still referenced by their original memory locations, meaning changes to nested objects in the cloned object will affect the original.
+Deep cloning creates a new object and also recursively clones nested objects or arrays, ensuring the cloned object is completely independent of the original.
+
+var obj = { a: 1, b: { c: 2 } };
+var shallowClone = { ...obj };
+shallowClone.b.c = 3; // This will also change obj.b.c to 3
+
+var deepClone = JSON.parse(JSON.stringify(obj));
+deepClone.b.c = 4; // This will not affect the original object
+9. What are getters and setters in JavaScript?
+Answer: Getters and setters are special methods that allow you to define how to access and update properties of an object. They provide a way to control the values being set or returned.
+
+
+var person = {
+    firstName: "John",
+    lastName: "Doe",
+    get fullName() {
+        return this.firstName + " " + this.lastName;
+    },
+    set fullName(name) {
+        var parts = name.split(" ");
+        this.firstName = parts[0];
+        this.lastName = parts[1];
+    }
+};
+
+console.log(person.fullName); // "John Doe"
+person.fullName = "Jane Smith";
+console.log(person.firstName); // "Jane"
+10. How can you check if an object has a specific property?
+Answer: You can check if an object has a specific property using the in operator or the hasOwnProperty() method.
+
+Using in operator:
+
+console.log("name" in person); // true
+Using hasOwnProperty():
+
+console.log(person.hasOwnProperty("name")); // true
+11. What is this in the context of an object method?
+Answer: In the context of an object method, this refers to the object that the method is a property of. It allows you to access other properties and methods of the same object from within a method.
+
+
+var person = {
+    name: "John",
+    greet: function() {
+        console.log("Hello, " + this.name);
+    }
+};
+person.greet(); // "Hello, John"
+12. What are JavaScript object destructuring and its benefits?
+Answer: Object destructuring is a syntax that allows you to extract values from objects and assign them to variables in a more concise way.
+
+
+var person = { name: "John", age: 30 };
+var { name, age } = person;
+console.log(name); // "John"
+console.log(age);  // 30
+13. What are object literals in JavaScript?
+Answer: Object literals are a shorthand way to define objects using a key-value syntax within curly braces {}. They are a fundamental way to create objects in JavaScript.
+var car = {
+    make: "Toyota",
+    model: "Corolla",
+    year: 2020
+};
+14. How do you merge two objects in JavaScript?
+Answer: You can merge two objects using Object.assign() or the spread operator (...).
+
+Using Object.assign():
+
+var obj1 = { a: 1 };
+var obj2 = { b: 2 };
+var merged = Object.assign({}, obj1, obj2);
+Using the spread operator:
+
+var merged = { ...obj1, ...obj2 };
+15. What are computed property names in JavaScript objects?
+Answer: Computed property names allow you to dynamically assign property names in an object literal using an expression enclosed in square brackets.
+
+
+var propName = "age";
+var person = {
+    name: "John",
+    [propName]: 30
+};
+console.log(person.age); // 30

@@ -1,0 +1,483 @@
+Exercise 1: Concatenation
+Concatenate two strings to form a full sentence.
+
+
+const str1 = "Hello";
+const str2 = "world";
+const sentence = str1 + " " + str2;
+console.log(sentence); // Output: "Hello world"
+
+
+Exercise 2: String Length
+Calculate and print the length of a given string.
+
+const myString = "JavaScript is fun!";
+console.log(myString.length); // Output: 19
+
+Exercise 3: Uppercase and Lowercase
+Convert a string to uppercase and lowercase.
+
+
+const originalString = "Hello World";
+const uppercaseString = originalString.toUpperCase();
+const lowercaseString = originalString.toLowerCase();
+console.log(uppercaseString); // Output: "HELLO WORLD"
+console.log(lowercaseString); // Output: "hello world"
+
+
+Exercise 4: Substring
+Extract a portion of a string using the substring method.
+
+
+const fullString = "Hello, how are you?";
+const partialString = fullString.substring(7, 16);
+console.log(partialString); // Output: "how are"
+
+
+Exercise 5: String Replace
+Replace a specific substring within a string.
+
+
+const originalText = "I like cats!";
+const newText = originalText.replace("cats", "dogs");
+console.log(newText); // Output: "I like dogs!"
+
+
+Exercise 6: String Split
+Split a string into an array of substrings.
+
+const sentence = "JavaScript is a programming language.";
+const wordsArray = sentence.split(" ");
+console.log(wordsArray); // Output: ["JavaScript", "is", "a", "programming"
+
+
+
+Exercise 7: Check if String Contains Substring
+Check if a string contains a specific substring using the includes method.
+
+
+const mainString = "Hello, how are you?";
+const substring = "how";
+const containsSubstring = mainString.includes(substring);
+console.log(containsSubstring); // Output: true
+
+
+Exercise 8: Trimming Whitespaces
+Remove leading and trailing whitespaces from a string using trim.
+
+
+const stringWithSpaces = "   Hello, World!   ";
+const trimmedString = stringWithSpaces.trim();
+console.log(trimmedString); // Output: "Hello, World!"
+
+
+Exercise 9: Character Access
+Access individual characters of a string using bracket notation.
+
+
+const myString = "JavaScript";
+console.log(myString[0]); // Output: "J"
+console.log(myString[4]); // Output: "S"
+
+Exercise 10: String Comparison
+Compare two strings to check if they are equal.
+
+
+const string1 = "apple";
+const string2 = "Apple";
+const areEqual = string1 === string2;
+console.log(areEqual); // Output: false
+
+
+Exercise 11: String Concatenation with Variables
+Create a sentence by concatenating strings and variables.
+
+
+const name = "Alice";
+const age = 30;
+const sentence = "My name is " + name + " and I am " + age + " years old.";
+console.log(sentence); // Output: "My name is Alice and I am 30 years old."
+
+Exercise 12: String Template Literals
+Use template literals to create a sentence with variables.
+
+
+const city = "New York";
+const temperature = 75;
+const weatherReport = `Today in ${city}, the temperature is ${temperature}°F.`;
+console.log(weatherReport); // Output: "Today in New York, the temperature is 75°F."
+
+
+
+Exercise 13: Repeating Strings
+Repeat a string a certain number of times.
+
+const repeatedString = "abc".repeat(3);
+console.log(repeatedString); // Output: "abcabcabc"
+
+Exercise 14: Finding Index of Substring
+Find the index of a specific substring within a string using the indexOf method.
+
+
+const mainString = "Hello, how are you?";
+const substring = "how";
+const index = mainString.indexOf(substring);
+console.log(index); // Output: 7
+
+
+Exercise 15: String Conversion
+Convert a number to a string using the toString method.
+
+
+const number = 42;
+const stringNumber = number.toString();
+console.log(stringNumber); // Output: "42"
+
+Exercise 16: String Reversal without Built-in Methods
+Write a function that reverses a string without using built-in methods.
+
+
+function reverseString(str) {
+    let reversed = "";
+    for (let i = str.length - 1; i >= 0; i--) {
+        reversed += str[i];
+    }
+    return reversed;
+}
+
+console.log(reverseString("hello")); // Output: "olleh"
+console.log(reverseString("world")); // Output: "dlrow"
+
+
+Exercise 17: String Padding
+Pad a string with a specified character to a certain length.
+
+
+function padString(str, length, padChar) {
+    if (str.length >= length) {
+        return str;
+    }
+    const padAmount = length - str.length;
+    const padding = padChar.repeat(padAmount);
+    return padding + str;
+}
+
+console.log(padString("Hello", 10, "*")); // Output: "**Hello"
+console.log(padString("JavaScript", 15, "-")); // Output: "JavaScript----"
+
+
+Exercise 18: Count Character Occurrences
+Write a function that counts the occurrences of a specific character in a string.
+
+
+function countCharacter(str, char) {
+    let count = 0;
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === char) {
+            count++;
+        }
+    }
+    return count;
+}
+
+console.log(countCharacter("hello", "l")); // Output: 2
+console.log(countCharacter("programming", "m")); // Output: 2
+
+Exercise 19: Sentence Capitalization
+Write a function that capitalizes the first letter of each sentence in a paragraph.
+
+function capitalizeSentences(paragraph) {
+    return paragraph.replace(/(^|\.\s+)([a-z])/g, (match, p1, p2) => p1 + p2.toUpperCase());
+}
+
+const paragraph = "hello. how are you? i'm fine.";
+console.log(capitalizeSentences(paragraph)); // Output: "Hello. How are you?
+
+Exercise 20: Acronym Generator
+Write a function that generates an acronym from a given phrase.
+
+	
+function generateAcronym(phrase) {
+    const words = phrase.split(" ");
+    const acronym = words.map(word => word[0].toUpperCase()).join("");
+    return acronym;
+}
+
+console.log(generateAcronym("central processing unit")); // Output: "CPU"
+console.log(generateAcronym("world wide web")); // Output: "WWW"
+
+
+Exercise 21: Title Case Conversion
+Write a function that converts a string to title case (capitalize the first letter of each word).
+
+
+function toTitleCase(str) {
+    return str.replace(/\w+/g, word => word[0].toUpperCase() + word.slice(1).toLowerCase());
+}
+
+console.log(toTitleCase("hello world")); // Output: "Hello World"
+console.log(toTitleCase("javascript is awesome")); // Output: "Javascript Is Awesome"
+
+
+Exercise 22: String Compression
+Write a function that performs basic string compression. For consecutive repeating characters, replace them with the character followed by the count.
+
+
+function compressString(str) {
+    let compressed = '';
+    let count = 1;
+
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === str[i + 1]) {
+            count++;
+        } else {
+            compressed += str[i] + count;
+            count = 1;
+        }
+    }
+
+    return compressed.length < str.length ? compressed : str;
+}
+
+console.log(compressString("aabcccccaaa")); // Output: "a2b1c5a3"
+console.log(compressString("abcde")); // Output: "abcde" (no compression)
+
+
+Exercise 23: String Rotation Check
+Write a function that checks if one string is a rotation of another string.
+
+
+function isRotation(str1, str2) {
+    if (str1.length !== str2.length) {
+        return false;
+    }
+    const concatenated = str1 + str1;
+    return concatenated.includes(str2);
+}
+
+console.log(isRotation("waterbottle", "erbottlewat")); // Output: true
+console.log(isRotation("hello", "world")); // Output: false
+
+
+
+Exercise 24: Remove Duplicates
+Write a function that removes duplicate characters from a string.
+
+
+function removeDuplicates(str) {
+    let unique = '';
+    for (let char of str) {
+        if (!unique.includes(char)) {
+            unique += char;
+        }
+    }
+    return unique;
+}
+
+console.log(removeDuplicates("banana")); // Output: "ban"
+console.log(removeDuplicates("programming")); // Output: "progamin"
+
+
+Exercise 25: Count Consonants and Vowels
+Write a function that counts the number of consonants and vowels in a string.
+
+function countConsonantsAndVowels(str) {
+    const vowels = 'aeiouAEIOU';
+    let consonants = 0;
+    let vowelsCount = 0;
+
+    for (let char of str) {
+        if (vowels.includes(char)) {
+            vowelsCount++;
+        } else if (/[a-zA-Z]/.test(char)) {
+            consonants++;
+        }
+    }
+
+    return { consonants, vowels: vowelsCount };
+}
+
+console.log(countConsonantsAndVowels("hello")); // Output: { consonants: 2, vowels: 2 }
+console.log(countConsonantsAndVowels("programming")); // Output: { consonants: 8, vowels: 4 }
+
+
+
+Exercise 26: Sentence Reverse
+Write a function that reverses the order of words in a sentence.
+
+
+function reverseSentence(sentence) {
+    const words = sentence.split(" ");
+    return words.reverse().join(" ");
+}
+
+console.log(reverseSentence("Hello world")); // Output: "world Hello"
+console.log(reverseSentence("This is a test")); // Output: "test a is This"
+
+
+Exercise 27: String Encryption
+Write a function that replaces each character in a string with the character that is three positions to the right in the alphabet. For instance, 'a' becomes 'd', 'b' becomes 'e', and so on.
+
+function encryptString(str) {
+    const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+    return str.replace(/[a-z]/gi, char => {
+        const index = alphabet.indexOf(char.toLowerCase());
+        const encryptedIndex = (index + 3) % 26;
+        return char === char.toLowerCase() ? alphabet[encryptedIndex] : alphabet[encryptedIndex].toUpperCase();
+    });
+}
+
+console.log(encryptString("Hello, World!")); // Output: "Khoor, Zruog!"
+
+
+Exercise 28: Anagram Check
+Write a function that checks if two strings are anagrams (contain the same characters but in a different order).
+
+
+function areAnagrams(str1, str2) {
+    const sortedStr1 = str1.toLowerCase().split('').sort().join('');
+    const sortedStr2 = str2.toLowerCase().split('').sort().join('');
+    return sortedStr1 === sortedStr2;
+}
+
+console.log(areAnagrams("listen", "silent")); // Output: true
+console.log(areAnagrams("hello", "world")); // Output: false
+
+
+Exercise 29: Longest Common Prefix
+Write a function that finds the longest common prefix among an array of strings.
+
+
+function longestCommonPrefix(strs) {
+    if (strs.length === 0) return '';
+    let prefix = strs[0];
+    
+    for (let i = 1; i < strs.length; i++) {
+        while (strs[i].indexOf(prefix) !== 0) {
+            prefix = prefix.slice(0, prefix.length - 1);
+            if (prefix === '') return '';
+        }
+    }
+    
+    return prefix;
+}
+
+console.log(longestCommonPrefix(["flower", "flow", "flight"])); // Output: "fl"
+console.log(longestCommonPrefix(["dog", "racecar", "car"])); // Output: ""
+
+
+
+Exercise 30: String to Integer
+Write a function that converts a string containing a numeric value into an integer.
+
+
+function stringToInteger(str) {
+    return parseInt(str, 10);
+}
+
+console.log(stringToInteger("42")); // Output: 42
+console.log(stringToInteger("-123")); // Output: -123
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Exercise 1: Reverse a String
+Write a function that takes a string as input and returns the reversed version of the string.
+
+
+function reverseString(str) {
+    return str.split('').reverse().join('');
+}
+
+console.log(reverseString("hello")); // Output: "olleh"
+console.log(reverseString("world")); // Output: "dlrow"
+
+Exercise 2: Palindrome Check
+Write a function that checks whether a given string is a palindrome (reads the same forwards and backwards).
+
+
+function isPalindrome(str) {
+    const cleanedStr = str.toLowerCase().replace(/[^a-z0-9]/g, '');
+    const reversedStr = cleanedStr.split('').reverse().join('');
+    return cleanedStr === reversedStr;
+}
+
+console.log(isPalindrome("racecar")); // Output: true
+console.log(isPalindrome("hello"));   // Output: false
+
+
+Exercise 3: Capitalize First Letter
+Write a function that capitalizes the first letter of each word in a given string.
+
+
+function capitalizeFirstLetter(str) {
+    return str.replace(/\b\w/g, char => char.toUpperCase());
+}
+
+console.log(capitalizeFirstLetter("hello world")); // Output: "Hello World"
+console.log(capitalizeFirstLetter("javascript is awesome")); // Output: "Java
+
+
+Exercise 4: Counting Vowels
+Write a function that counts the number of vowels (a, e, i, o, u) in a given string.
+
+
+function countVowels(str) {
+    return (str.match(/[aeiou]/gi) || []).length;
+}
+
+console.log(countVowels("hello")); // Output: 2
+console.log(countVowels("javascript")); // Output: 3
+
+
+Exercise 5: Longest Word
+Write a function that finds the longest word in a given sentence.
+
+
+function longestWord(sentence) {
+    const words = sentence.split(' ');
+    let longest = '';
+    
+    for (const word of words) {
+        if (word.length > longest.length) {
+            longest = word;
+        }
+    }
+    
+    return longest;
+}
+
+console.log(longestWord("I love programming in JavaScript")); // Output: "programming"
+console.log(longestWord("The quick brown fox jumps over the lazy dog")); // O
+
+

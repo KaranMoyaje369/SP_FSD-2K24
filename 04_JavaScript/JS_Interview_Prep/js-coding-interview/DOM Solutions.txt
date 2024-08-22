@@ -1,0 +1,344 @@
+Exercise 1: Change Text Content
+Change the text content of a <p> element with the id "demo" to "Hello, DOM!".
+
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <p id="demo">This is a paragraph.</p>
+    <script>
+      const paragraph = document.getElementById("demo");
+      paragraph.textContent = "Hello, DOM!";
+    </script>
+  </body>
+</html>
+
+Exercise 2: Change Element Style
+Change the background color of a <div> element with the id "myDiv" to blue.
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="myDiv" style="width: 100px; height: 100px; background-color: red;"></div>
+    <script>
+      const divElement = document.getElementById("myDiv");
+      divElement.style.backgroundColor = "blue";
+    </script>
+  </body>
+</html>
+Exercise 3: Add a New Element
+Create a new <p> element with the text "This is a new paragraph." and append it to a <div> element with the id "container".
+
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="container"></div>
+    <script>
+      const container = document.getElementById("container");
+      const newParagraph = document.createElement("p");
+      newParagraph.textContent = "This is a new paragraph.";
+      container.appendChild(newParagraph);
+    </script>
+  </body>
+</html>
+Exercise 4: Remove an Element
+Remove a <p> element with the id "removeMe" from the document.
+
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <p id="removeMe">This paragraph will be removed.</p>
+    <script>
+      const paragraphToRemove = document.getElementById("removeMe");
+      paragraphToRemove.remove();
+    </script>
+  </body>
+</html>
+Exercise 5: Event Handling
+Create a button that changes the text content of a <p> element when clicked.
+
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <p id="changeMe">Click the button to change this text.</p>
+    <button id="btn">Change Text</button>
+    <script>
+      const button = document.getElementById("btn");
+      const paragraph = document.getElementById("changeMe");
+      button.addEventListener("click", function () {
+        paragraph.textContent = "Text has been changed!";
+      });
+    </script>
+  </body>
+</html>
+
+Exercise 1: Select by ID
+Select the element with the ID "myElement" and change its text content to "I was selected by ID."
+
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <p id="myElement">Initial text.</p>
+    <script>
+      const element = document.getElementById("myElement");
+      element.textContent = "I was selected by ID.";
+    </script>
+  </body>
+</html>
+Exercise 2: Select by Class Name
+Select all elements with the class name "myClass" and change their text content to "I was selected by class name."
+
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <p class="myClass">Initial text 1.</p>
+    <p class="myClass">Initial text 2.</p>
+    <script>
+      const elements = document.getElementsByClassName("myClass");
+      for (const element of elements) {
+        element.textContent = "I was selected by class name.";
+      }
+    </script>
+  </body>
+</html>
+Exercise 3: Select by Tag Name
+Select all <p> elements and change their text content to "I was selected by tag name."
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>Initial text 1.</p>
+    <p>Initial text 2.</p>
+    <script>
+      const elements = document.getElementsByTagName("p");
+      for (const element of elements) {
+        element.textContent = "I was selected by tag name.";
+      }
+    </script>
+  </body>
+</html>
+Exercise 4: Select by Query Selector
+Select the first element with the class "special" and change its text content to "I was selected by query selector."
+
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <p class="special">Initial text.</p>
+    <p class="special">Not selected.</p>
+    <script>
+      const element = document.querySelector(".special");
+      element.textContent = "I was selected by query selector.";
+    </script>
+  </body>
+</html>
+Exercise 5: Select and Change Multiple Elements
+Select all elements with the class "highlight" and change their background color to yellow.
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .highlight {
+        background-color: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="highlight">Text 1.</p>
+    <p class="highlight">Text 2.</p>
+    <p>Text 3.</p>
+    <script>
+      const elements = document.querySelectorAll(".highlight");
+      elements.forEach(function(element) {
+        element.style.backgroundColor = "yellow";
+      });
+    </script>
+  </body>
+</html>
+Exercise 1: Change Text Color
+Change the text color of a <p> element with the ID "myText" to red.
+
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <p id="myText">This text will turn red.</p>
+    <script>
+      const textElement = document.getElementById("myText");
+      textElement.style.color = "red";
+    </script>
+  </body>
+</html>
+Exercise 2: Change Background Color
+Change the background color of a <div> element with the ID "myDiv" to green.
+
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="myDiv">This div will have a green background.</div>
+    <script>
+      const divElement = document.getElementById("myDiv");
+      divElement.style.backgroundColor = "green";
+    </script>
+  </body>
+</html>
+Exercise 3: Change Font Size
+Change the font size of all <p> elements with the class "text" to 20 pixels.
+
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <p class="text">Text 1</p>
+    <p class="text">Text 2</p>
+    <p class="text">Text 3</p>
+    <script>
+      const paragraphs = document.querySelectorAll(".text");
+      paragraphs.forEach(function(paragraph) {
+        paragraph.style.fontSize = "20px";
+      });
+    </script>
+  </body>
+</html>
+Exercise 4: Add a CSS Class
+Add a CSS class "highlight" to a <p> element with the ID "highlightMe" to change its text color to blue.
+
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <p id="highlightMe">This text will be highlighted.</p>
+    <script>
+      const textElement = document.getElementById("highlightMe");
+      textElement.classList.add("highlight");
+    </script>
+  </body>
+</html>
+Exercise 5: Remove a CSS Class
+Remove a CSS class "inactive" from a <button> element with the ID "activateButton" to make it active.
+
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <button id="activateButton" class="inactive">Activate</button>
+    <script>
+      const buttonElement = document.getElementById("activateButton");
+      buttonElement.classList.remove("inactive");
+    </script>
+  </body>
+</html>
+Exercise 6: Toggle a CSS Class
+Toggle a CSS class "hidden" on a <div> element with the ID "toggleDiv" to show/hide it.
+
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <button onclick="toggleVisibility()">Toggle</button>
+    <div id="toggleDiv" class="hidden">This div can be toggled.</div>
+    <script>
+      function toggleVisibility() {
+        const divElement = document.getElementById("toggleDiv");
+        divElement.classList.toggle("hidden");
+      }
+    </script>
+  </body>
+</html>
+Exercise 1: Set an Attribute
+Set the "src" attribute of an <img> element with the ID "myImage" to a new image URL.
+
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <img id="myImage" src="old-image.jpg" alt="Old Image">
+    <button onclick="changeImage()">Change Image</button>
+    <script>
+      function changeImage() {
+        const imgElement = document.getElementById("myImage");
+        imgElement.setAttribute("src", "new-image.jpg");
+      }
+    </script>
+  </body>
+</html>
+Exercise 2: Get an Attribute
+Get and display the "href" attribute of a <a> element with the ID "myLink" in an alert.
+
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <a id="myLink" href="https://www.example.com">Visit Example</a>
+    <button onclick="getLinkHref()">Get Link Href</button>
+    <script>
+      function getLinkHref() {
+        const linkElement = document.getElementById("myLink");
+        const hrefValue = linkElement.getAttribute("href");
+        alert(hrefValue);
+      }
+    </script>
+  </body>
+</html>
+Exercise 3: Remove an Attribute
+Remove the "disabled" attribute from a <button> element with the ID "myButton" to enable it.
+
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <button id="myButton" disabled>Click Me</button>
+    <button onclick="enableButton()">Enable Button</button>
+    <script>
+      function enableButton() {
+        const buttonElement = document.getElementById("myButton");
+        buttonElement.removeAttribute("disabled");
+      }
+    </script>
+  </body>
+</html>
+Exercise 4: Add a Custom Attribute
+Add a custom attribute "data-color" with the value "blue" to a <div> element with the ID "myDiv."
+
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="myDiv">This is a div.</div>
+    <button onclick="addCustomAttribute()">Add Attribute</button>
+    <script>
+      function addCustomAttribute() {
+        const divElement = document.getElementById("myDiv");
+        divElement.setAttribute("data-color", "blue");
+      }
+    </script>
+  </body>
+</html>
+Exercise 5: Check if an Attribute Exists
+Check if a <input> element with the ID "myInput" has the "placeholder" attribute and display a message accordingly.
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <input id="myInput" type="text">
+    <button onclick="checkAttribute()">Check Attribute</button>
+    <script>
+      function checkAttribute() {
+        const inputElement = document.getElementById("myInput");
+        if (inputElement.hasAttribute("placeholder")) {
+          alert("The placeholder attribute exists.");
+        } else {
+          alert("The placeholder attribute does not exist.");
+        }
+      }
+    </script>
+  </body>
+</html>

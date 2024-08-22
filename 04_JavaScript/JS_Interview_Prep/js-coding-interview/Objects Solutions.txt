@@ -1,0 +1,193 @@
+Exercise 1: Create an Object
+Create an object named "person" with the following properties:
+
+Name: "John"
+Age: 30
+Occupation: "Developer"
+
+
+const person = {
+  name: "John",
+  age: 30,
+  occupation: "Developer"
+};
+Exercise 2: Access Object Properties
+Access and print the "name" and "age" properties of the "person" object.
+
+
+console.log(person.name); // Output: "John"
+console.log(person.age);  // Output: 30
+Exercise 3: Modify Object Property
+Change the "occupation" property of the "person" object to "Designer."
+
+
+person.occupation = "Designer";
+console.log(person.occupation); // Output: "Designer"
+Exercise 4: Add a New Property
+Add a new property "location" with the value "New York" to the "person" object.
+
+
+person.location = "New York";
+console.log(person.location); // Output: "New York"
+
+Exercise 5: Iterate Through Object Properties
+Write a loop to iterate through all the properties of the "person" object and print them.
+
+for (const key in person) {
+  console.log(`${key}: ${person[key]}`);
+}
+/* Output:
+name: John
+age: 30
+occupation: Designer
+location: New York
+*/
+Exercise 6: Check if a Property Exists
+Check if the "email" property exists in the "person" object and print "Email exists" if it does, or "Email does not exist" if it doesn't.
+
+
+if ("email" in person) {
+  console.log("Email exists");
+} else {
+  console.log("Email does not exist");
+}
+// Output: "Email does not exist"
+Exercise 7: Delete a Property
+Delete the "location" property from the "person" object.
+
+
+delete person.location;
+console.log(person.location); // Output: undefined
+
+Exercise 8: Nested Objects
+Create an object called "car" with properties:
+
+Make: "Toyota"
+Model: "Camry"
+Engine: { Type: "V6", Horsepower: 270 }
+Access and print the "Engine Type" property.
+
+
+const car = {
+  Make: "Toyota",
+  Model: "Camry",
+  Engine: { Type: "V6", Horsepower: 270 }
+};
+
+console.log(car.Engine.Type); // Output: "V6"
+Exercise 9: Object Methods
+Create an object called "circle" with a property "radius" and a method "calculateArea" that calculates the area of the circle (π * radius^2).
+
+
+const circle = {
+  radius: 5,
+  calculateArea: function() {
+    return Math.PI * this.radius ** 2;
+  }
+};
+
+console.log(circle.calculateArea()); // Output: 78.53981633974483
+Exercise 10: Object Constructor
+Create a constructor function "Person" that can be used to create instances of people with properties "name" and "age."
+
+
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+const person1 = new Person("Alice", 25);
+const person2 = new Person("Bob", 30);
+
+console.log(person1.name); // Output: "Alice"
+console.log(person2.age);  // Output: 30
+Exercise 11: Object Comparison
+Create two objects, "student1" and "student2," with the same properties (e.g., name, age). Check if these two objects are equal.
+
+
+const student1 = { name: "John", age: 20 };
+const student2 = { name: "John", age: 20 };
+
+const isEqual = JSON.stringify(student1) === JSON.stringify(student2);
+
+console.log(isEqual); // Output: true
+Exercise 12: Object Destructuring
+Use object destructuring to extract the "name" and "age" properties from the "student1" object into separate variables.
+
+
+const { name, age } = student1;
+
+console.log(name); // Output: "John"
+console.log(age);  // Output: 20
+Exercise 13: Object Inheritance
+Create a "Person" object with properties "name" and "age." Then, create a "Student" object that inherits from "Person" and also has a "school" property.
+
+
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+function Student(name, age, school) {
+  Person.call(this, name, age);
+  this.school = school;
+}
+
+const student = new Student("Alice", 22, "XYZ School");
+
+console.log(student.name);   // Output: "Alice"
+console.log(student.age);    // Output: 22
+console.log(student.school); // Output: "XYZ School"
+Exercise 14: Object Method Inheritance
+Extend the "Person" object from the previous exercise with a method called "greet" that prints a greeting message.
+
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+  this.greet = function() {
+    console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+  };
+}
+
+const person = new Person("John", 30);
+person.greet(); // Output: "Hello, my name is John and I am 30 years old."
+Exercise 15: Object Prototypes
+Create a prototype method called "isAdult" for the "Person" object that returns true if the person is 18 years or older.
+
+Person.prototype.isAdult = function() {
+  return this.age >= 18;
+};
+
+const person1 = new Person("Alice", 17);
+const person2 = new Person("Bob", 25);
+
+console.log(person1.isAdult()); // Output: false
+console.log(person2.isAdult()); // Output: true
+Exercise 16: Object Property Enumeration
+Create an object with properties representing the days of the week. Write a loop to iterate through these properties and print their values.
+
+
+const daysOfWeek = {
+  Monday: "First day",
+  Tuesday: "Second day",
+  Wednesday: "Third day",
+  Thursday: "Fourth day",
+  Friday: "Fifth day",
+  Saturday: "Sixth day",
+  Sunday: "Seventh day"
+};
+
+for (const day in daysOfWeek) {
+  console.log(`${day}: ${daysOfWeek[day]}`);
+}
+Exercise 17: Object Copy
+Create a function that takes an object as an argument and returns a shallow copy of the object.
+
+function shallowCopy(obj) {
+  return Object.assign({}, obj);
+}
+
+const originalObject = { a: 1, b: 2 };
+const copiedObject = shallowCopy(originalObject);
+
+console.log(copiedObject); // Output: { a: 1, b: 2 }
