@@ -1,0 +1,652 @@
+HTML:
+================
+HTML==> hypertext markup language
+1.used to create web applications and web pages.
+2.It is widely used language on the web.
+3.By using "HTML" we can create "static web pages" only.
+4. technically, HTML is markup language rather than programming language.
+
+what is HTML?
+HYPER TEXT MARKUP LANGUAGE:
+
+HYPER TEXT: simply, "text within text". a text has a link with in it is "hypertext".
+  --------   *whenever you click on link it brings you a new web page.
+             *Hypertext is a way to link a one or more web pages.
+
+markup language:
+----------------*markup language is computer language.
+                *It is used to apply on conversion and formatting on to a text document.
+				*These text turn into create images, tables, links.
+				
+web page:
+---------* a web page is commonly called as html document and translated by a web browser.
+         * A web page is identified by an entering an "URL".
+		 * a web page can be static or dynamic web page.
+		 
+		 
+HTML example:
+-------------
+e.g.:
+--
+<!Doctype>
+<html>
+<head>
+
+<title>web page title</title>
+
+</head>
+<body>
+
+<h1>First heading</h1>
+<p>First paragraph</p>
+
+</body>
+
+</html>
+
+
+
+DESCRIPTION:
+=============
+<!DOCTYPE> => IT defines document type
+
+<html> =>* this tag informs the browser that is html document.
+          * Text between the html tag describes the "web document"
+		  *It is container of all other html tags except <!doctype>
+
+<head>   =>*it should be first element inside the html element.
+           * It contains metadata (info about the document)
+		   * It must be closed before opens the body tag.
+		   
+<title> => in this we can add the title to the html page which appears on top of the "browser"
+           *It must be placed inside the head tag.
+		
+<body>    => text between the body tag describe the content of the document.
+            *It can see only by the end user.
+			
+<h1>     =>this tag describes the main heading the web page.
+
+<p>    =>   this tag describes the paragraph of webpage.
+
+
+FEATURES OF HTML:
+==================
+1.it is very easy and simple language.
+2.to make effective presentations with html tags.
+3.it is markup language it provides flexibility way to design the web pages.
+4.platform independent.
+5.it facilitates the programmer to add videos, audios, images.
+6. it is case sensitive language.
+
+
+HTML TEXT EDITORS:
+=================
+* html file is a text file. create html file by any text editors.
+*there are various text editors notepad(windows), TextEdit(mac).
+
+HTML BUILDING BLOCKS:
+======================
+1.TAGS
+2.ATTRIBUTES
+3.ELEMENT
+
+
+TAGS: *html tag is surrounded by the content and apply meaning to it.  
+      *It is written between < and > brackets.
+
+ATTRIBUTES: * an attributes in html provides the extra info about the element.
+            *It applied within the "start" tag.
+			*Attribute contains two fields: name & value.
+			
+	e.g.:    <tagname attribute-name="attribute-value"> content</tagname>		
+			
+ELEMENT: *the element is the content which is written in between the tags.
+
+
+HTML TAGS:
+==========
+html tags are keywords, these are used define that how web browser will format and display
+the content.
+with the help of tags web browser can distinguish "html content " and simple content.
+html tags contain mainly "three parts" 1. opening tag, 2. content, 3. closing tag
+* html file must have some essential tags so that web browser can differentiate the html and simple
+text.
+
+syntax:
+       <tag>content</tag>
+*html tags are always written in lowercase.
+
+basic html tags:
+----------------
+<p>paragraph tag </p>
+
+<h2> second heading tag </h2>
+
+<b> bold tag </b>
+
+<i> italic tag</i>
+
+<u> under line tag </u>
+
+UNCLOSED HTML TAGS:
+--------------------
+<br> tag: it is break tag, it breaks the line or line of the code.
+
+<hr> tag: it is horizontal rule tag. put a line across the web page.
+
+HTML META TAGS:
+---------------
+              DOCTYPE        title    link      meta        style
+
+HTML TEXT TAGS:
+----------------
+<p> <h1>   <h2> <h3> <h4> <h5> <h6> <strong> <em> <abbr> <acronym>
+ 
+ <address> <bdo>    <blockquote> <cite> <q> <code> <ins> <del> <dfn>  <kbd>
+ 
+ <pre> <samp> <var> and <br>
+ 
+ HTML LINK TAGS:
+ -------------
+ <a> AND <base>
+ 
+ HTML IMAGE AND OBJECT TAGS:
+ -------------------------
+ <img> <area> <map> <param> <object>
+ 
+HTML LIST TAGS:
+ --------------
+ <ul> <ol> <li> <dl> <dt> <dd>
+ 
+HTML TABLE TAGS:
+---------------
+table, td, tr, th, tbody, thead, tfoot, col, colgroup and caption
+
+HTML FORM TAGS:
+--------------
+form, input, textarea, select, option, optgroup, button, lable, fieldset and legend
+
+HTML SCRIPTING TAGS;
+--------------------
+script and nonscript
+
+
+
+HTML ATTRIBUTES:
+=================
+html attributes are special words, these give additions; info about the element or tag.
+
+each element or tag have attributes which define the behaviour of the element.
+
+attribute should always apply on start tag.
+
+attribute name and value are case sensitive. 	
+
+syntax:
+            <tag attribute-name="value">content</tag>
+			
+
+title attribute: (tooltip)
+---------------
+the title attribute mostly used as text "tooltip".
+it displays the text whenever user click on text or link.
+
+e.g.:
+---
+with <h1> tag:     <h1 title="this is heading"> HTML TITLE attribute<h1>
+
+with <p> tag:     <p title="this is paragraph">this is title attribute</p>
+
+href attribute:
+---------------
+href attribute id the main attribute of <a> anchor tag.
+this attribute gives the link address which is displayed in the link.
+the href provides “hyperlink" and the if it is blank, opens another window.
+
+e.g.:
+--
+with link address: <a href="https://touch.facebook.com/?_rdr"> Facebook log in page</a>
+
+without link: <a href="">without link address</a>
+
+src attribute:
+==============
+the src attribute is the main attribute in the img element.
+it is source for the image which displayed on the browser.
+the image source should be correct otherwise browser will not display the image.
+
+e.g.:
+
+            <img src="iconfinder_facebook_834722.png">
+			
+			
+QUOTES:
+======
+1.double quotes
+2.single quotes
+
+for attributes we are using double quotes, but some users can also use single quotes both are 
+allowed in HTML.
+
+e.g.:
+
+           <a href="">double quotes</a>
+		   
+		   <a href=''>single quotes</a>
+		   
+HTML ELEMENTS:
+=================
+technically, element is a collection of start tag attributes, end tag and content between them.
+
+e.g.:  <start tag attribute-name="attribute value"> content </ end tag>
+
+
+void element:(unpaired tag)
+-----------
+in the html all the elements not have start and end tags, some elements are also not have end tags
+those are called "void tags" or "empty tags"
+
+
+BLOCK LEVEL AND INLINE HTML ELEMENTS:
+====================================
+1.block level elements
+2. inline elements
+
+block level elopements:
+--------------------- these elements are which structure main part of the web page,
+by dividing a web page coherent block.
+  block level element can take full width of web page from left to right.
+  
+  these elements contain both block level and inline elements.
+  
+ =following are the block level elements:
+ -----------------------------------
+ <address>, <article>, <aside>, <blockquote>, <canvas>, <dd>, <div>, <dl>,
+ <dt>, <fieldset>, <figcaption>, <figure>, <footer>, <form>, <h1>-<h6>, <header>, 
+ <hr>, <li>, <main>, <nav>, <nonscript>, <ol>,
+ <output>, <p>, <pre>, <section>, <table>, <tfoot>, <ul> and <video>.
+ 
+ e.g.:         <div style="background-color: red">content about block level</div>
+ 
+   the tag which is used above selected as complete web page specified width left to right.
+  
+  
+ Inline elopements:
+ -------------------
+ differentiate part of a given text and provide it a particular function.
+ these elements won’t take new line, width take it as requirement.
+ 
+ <a>, <abbr>, <acronym>, <b>, <bdo>, <big>, <br>, <button>, <cite>, <code>, <dfn>, 
+ <em>, <i>, <img>, <input>, <kbd>, <label>, <map>, <object>, <q>, <samp>, <script>,
+ <select>, <small>, <span>, <strong>, <sub>, <sup>, <textarea>,
+ <time>, <tt>, <var>.
+ 
+ eg:  <a href="">click on link</a>
+      <span>this is pahagbba</span>
+	  
+	  
+HTML FORMATTING:
+===============
+it is used for formatting better look and feel.
+html provides format text without using "CSS".
+
+html tags are divided into two categories:
+
+1.physical tag: provide visual appearance to the text.
+
+2.logical tag: add some logical or semantic value to the text.
+
+
+<b>	: This is a physical tag, which is used to bold the text written between it.
+<strong>:	This is a logical tag, which tells the browser that the text is important.
+<i>	: This is a physical tag which is used to make text italic.
+<em>:	This is a logical tag which is used to display content in italic.
+<mark>	: This tag is used to highlight text.
+<u>	: This tag is used to underline text written between it.
+<tt>:	This tag is used to appear a text in teletype. (Not supported in HTML5)
+<strike>	: This tag is used to draw a strikethrough on a section of text. (Not supported in HTML5)
+<sup>	: It displays the content slightly above the normal line.
+<sub>:	It displays the content slightly below the normal line.
+<del>	: This tag is used to display the deleted content.
+<ins>	: This tag displays the content which is added
+<big>	: This tag is used to increase the font size by one conventional unit.
+<small>	: This tag is used to decrease the font size by one unit from base font size.
+
+
+HTML Heading:
+============
+A HTML heading or HTML h tag can be defined as a title or subtitle which you want to display
+ on the browser.
+HTML tag or heading tag <h1>...</h1> tag can be used to display the main content of the browser.
+There are six different heading which are defined are with <h1>, <h2>, <h3>, <h4>, <h5>, <h6>.
+<h1> is main heading, <h6> is the least important heading.
+
+eg:
+---
+<h1>...</h1>
+<h1>...</h2>
+<h1>...</h3>
+<h1>...</h4>
+<h1>...</h5>
+<h1>...</h6>
+
+HTML Paragraph:
+=============
+HTML paragraph is used to display the paragraph on the web page.
+the paragraph is <p>. </p>
+*If you put a lot of space in paragraph p tag here html counts the space whenever it displays the space 
+in the browser.
+
+HTML phrase tag:
+====================
+the html phrase tags are called special purpose tags, which defines the structural meaning of 
+block of text.
+
+following are the phrase tags.
+
+Abbreviation tag: <abbr>
+-----------------
+abbreviation tag is used to abbreviate a text, to abbreviate a text <abbr> and </abbr>
+eg: 
+<html>
+<title> html formatting</title>
+<body>
+
+<h1 title="HTML Heading">HTML formatting</h1>
+
+<p>an<abbr title="Hypertext markup language">HTML</abbr> languages is
+ used for create web pages</p>
+
+</body>
+</html>
+
+Acronym tag: <acronym> (not supported in HTML5)
+-------------
+Marked tag: <mark>
+----------
+the content written between <mark> and <mark> tag will show you yellow mark on the text.
+it will highlight the text which you placed between the mark tag.
+
+eg:
+<html>
+<title> html formatting</title>
+<body>
+
+<h1 title="HTML Heading">HTML formatting</h1>
+
+<p>An HTML language is also called either <mark>markup</mark> or programming language</p>
+
+</body>
+</html>
+
+Strong tag: <strong>
+---------
+the tag is used to display the important text of the content. the text written between
+ <strong> and</strong> will display the important text.
+ 
+ eg:
+ 
+ <html>
+<title> html formatting</title>
+<body>
+
+<h1 title="HTML Heading">HTML formatting</h1>
+
+<p>An HTML language is also called either <strong>markup or programming </strong>language</p>
+
+</body>
+</html>
+
+ 
+ 
+Emphasized tag: <em>
+--------------
+this tag is used to display the emphasized the text, display the italic format. the text written
+between <em>.........</em> will display the italic format.
+
+eg:
+<html>
+<title> html formatting</title>
+<body>
+
+<h1 title="HTML Heading">HTML formatting</h1>
+
+<p>An HTML language is also called either <em>markup or programming </em>language</p>
+
+</body>
+</html>
+
+
+Definition tag: <dfn>
+--------------
+by using of this tag, it shows the specific keyword in between the tags. <dfn>......</dfn>
+
+eg:
+<html>
+<title> html formatting</title>
+<body>
+
+<h1 title="HTML Heading">HTML formatting</h1>
+
+<p>An <dfn>HTML</dfn> language is also called either markup or programming language</p>
+
+</body>
+</html>
+
+Quoting tag: <blockquote>
+-------------
+the HTML <blockquote> element shows that content is from another source.
+  the url given by the cite attribute in "blockquotes"
+  <blockquotes cite="url"><p>...........</p></blockquotes>
+  
+eg:
+
+<html>
+<title> html formatting</title>
+<body>
+
+<h1 title="HTML Heading">HTML formatting</h1>
+
+<p>An <dfn>HTML</dfn> language is also called either markup or programming language</p>
+
+<blockquotes cite="https://parade.com/937586/parade/life-quotes/"><p>The purpose of our lives is to be happy.
+</p></blockquotes>
+<cite>Dalai Lama</cite>
+</body>
+</html>
+
+Short quote tag: <q>
+--------------
+if you will put quote in between these tags you will get text in double quotes.
+<q>...........</q>
+
+eg:
+<html>
+<title> html formatting</title>
+<body>
+
+<h1 title="HTML Heading">HTML formatting</h1>
+
+
+<p>albert Einstein:<q>invented the gravitation force</q> many number fof predonsa</p>
+
+
+</body>
+</html>
+
+Code tag: <code>
+------------
+the HTML <code>.... </code> elements used to display code what you written in between tag.
+
+eg:
+
+HTML formatting
+first java program class Simple {public static void main (String args [])
+{sysytem.out.println ("hello java")}}will be printed.
+
+Keyboard tag: <kbd>
+----------
+the html <kbd>. </kbd> element is used to display the user input given by the keyboard.
+ eg: control + shift+R
+ 
+ eg:
+ <html>
+<title> html formatting</title>
+<body>
+
+<h1 title="HTML Heading">HTML formatting</h1>
+
+
+<p>Run command is <kbd>control</kbd>+<kbd>shift</kbd>+<kbd>R</kbd></p>
+
+
+</body>
+</html>
+
+Address tag: <address>
+------------
+this tag is used to display the address of the author content which you written between this tag.
+
+syntax: <address> contact info </address>
+
+eg:
+
+<html>
+<title> html formatting</title>
+<body>
+
+<h1 title="HTML Heading">HTML formatting</h1>
+
+<address> if you have any doubts, please replay this mailid:<a href="">sathya191916@gmail.com</a><br>
+village: theratigudem<br>
+post: chepur<br>
+di: Nalgonda<br>
+mo.: gurrAmpode<br>
+pin:508001</address>
+
+
+</body>
+</html>
+
+
+HTML Anchor:
+============
+html anchor tag contain hyperlink, that links one page to another web page. 
+ It can create a link by using "href" attribute. it links to destination of the page.
+
+href attribute of anchor tag:
+--------------------------
+this attribute is used to destination file in the given link.
+syntax: <a href="url">...text...</a>
+
+eg:
+
+<html>
+<title> html formatting</title>
+<body>
+
+<h1 title="HTML Heading">HTML formatting</h1>
+
+<p>click on<a href="https://www.javatpoint.com/" target="blank">java point home page</a>
+you will get home page</p>
+
+</body>
+</html>
+
+=> in the above code we used "target" attribute in anchor tag, by using this you will get link page
+in another page, or without "target" attribute you will get on the same page.
+
+
+HTML Image:
+==========
+HTML image tag is empty tag. It contains attributes only.
+it is used to display the image on the browser.
+
+Attributes of img tag:
+--------------------
+src:
+----
+it is necessary attribute to show the path of the image.
+the location of the image is same directory or on server.
+
+alt:
+---
+alt attribute is used whenever the image is not displayed on web page the content which 
+you written in the alt attribute show the content.
+
+width:
+----
+we can set the width of the image
+
+height:
+-------
+we can set the height of the image.
+
+syntax:
+<img src="image path" alt="image content" width="20px" height="40px">
+
+eg:
+
+<html>
+<title> html formatting</title>
+<body>
+
+<h1 title="HTML Heading">HTML image tag with width and height</h1>
+
+<img src="C:\Users\sathya prakash\Desktop\sathya\_20180302_072337.jpg" 
+alt="passphoto sathya prakash" width="60px" height="160px">
+
+</body>
+</html>
+
+HTML Table:
+==========
+HTML table tag is used to display data in tabular form(row*column).
+
+we can create a table to display in tabular form, using <table> element, with the help of
+ <tr>, <td>, and <th> elements.
+ 
+ => in each table
+      table row defined by <tr>
+	  table header is defined by <th>
+	  table data is defined by <td>
+  
+=> to manage the table layout, recommended to use "div" tag.
+
+HTML Table Tags:
+Tag	Description:
+<table>	It defines a table.
+<tr>	It defines a row in a table.
+<th>	It defines a header cell in a table.
+<td>	It defines a cell in a table.
+<caption>	It defines the table caption.
+<colgroup>	It specifies a group of one or more columns in a table for formatting.
+<col>	It is used with <colgroup> element to specify column properties for each column.
+<tbody>	It is used to group the body content in a table.
+<thead>	It is used to group the header content in a table.
+<footer>	It is used to group the footer content in a table.
+
+
+ eg:
+ ===
+ <html>
+<title> html formatting</title>
+<body>
+
+<h1 title="HTML Heading">HTML image tag with width and height</h1>
+
+<table>
+   <tr><th>FIRST NAME</th> <th>LAAST NAME</th> <th>Family name</th></tr>
+   
+   <tr><td>sathya</td><td>prakash</td><td>soma</td></tr>
+   <tr><td>swamy</td><td>-----</td><td>soma</td></tr>
+
+
+</table>
+
+</body>
+</html>
+
+HTML table with border:
+-----------------------
+
