@@ -1,2 +1,2 @@
 # SP_FSD-2K24
-Assignments
+Full Stack Developer || All Study Material ....
