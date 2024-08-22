@@ -1,0 +1,726 @@
+1. Introduction to CSS
+
+What is CSS?
+-----------
+CSS (Cascading Style Sheets) is a stylesheet language used to describe the presentation of a document written in HTML or XML.
+CSS defines how elements should be rendered on screen, on paper, in speech, or on other media.
+Advantages & Disadvantages
+
+Advantages:
+-----------
+Separation of Content and Style: Allows for separation of HTML content from visual design, making it easier to manage and update.
+Consistency: Enables consistent styling across multiple web pages, improving user experience.
+Efficiency: Reduces code redundancy by allowing a single CSS file to be reused across multiple pages.
+Accessibility: Improves accessibility by providing various ways to present content for different devices and screen sizes.
+
+Disadvantages:
+--------------
+Complexity in Large Projects: Managing CSS in large projects can become complex and challenging.
+Browser Compatibility Issues: Styles might render differently across various browsers, leading to inconsistencies.
+Learning Curve: Requires time and effort to learn and master the intricacies of CSS.
+
+Syntax & Rules to Write CSS:
+---------------------------
+Syntax Example:
+
+selector {
+    property: value;
+}
+Selector: Targets the HTML element(s) you want to style.
+Property: The aspect of the element you want to change (e.g., color, font-size).
+Value: The value for the property (e.g., red, 16px).
+
+Types of CSS:
+------------
+
+Inline CSS: Applied directly within an HTML element using the style attribute.
+----------
+<p style="color: blue;">This is a paragraph.</p>
+
+Internal CSS: Defined within the <style> element inside the <head> section of an HTML document.
+------------
+<style>
+  p {
+    color: blue;
+  }
+</style>
+External CSS: Linked to an HTML document using the <link> element, stored in a separate .css file.
+------------
+<link rel="stylesheet" href="styles.css">
+
+/* styles.css */
+p {
+    color: blue;
+}
+
+2. Selectors::::
+--------------
+
+ID Selector: Targets an element with a specific id attribute. IDs are unique within a page, so the ID selector should be used to style a single, unique element.
+-----------
+
+#header {
+    color: green;
+}
+
+<div id="header">This is the header</div>
+
+Class Selector: Targets elements with a specific class attribute. Multiple elements can share the same class.
+--------------
+
+.intro {
+    color: red;
+}
+
+<p class="intro">This is an introductory paragraph.</p>
+<p class="intro">This is another introductory paragraph.</p>
+Tag Selector: Targets all instances of a specific HTML tag.
+
+
+h1 {
+    color: blue;
+}
+
+<h1>This is a heading</h1>
+
+Group Selector: Applies the same styles to multiple selectors.
+--------------
+
+h1, h2, h3 {
+    color: purple;
+}
+
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+
+Universal Selector: Targets all elements on the page.
+-------------------
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+CSS Combinators:
+=================
+CSS combinators are used to combine selectors in various ways, allowing you to target elements based on their relationship in the DOM. Here are the detailed definitions of each combinator along with explanations and examples:
+
+1. Descendant Selector (space):
+--------------------------------
+Definition: The descendant selector targets all elements that are descendants of a specified element. It is represented by a space between two selectors.
+Example:
+
+.container p {
+    color: blue;
+}
+
+<div class="container">
+    <p>This paragraph is inside the container and will be blue.</p>
+    <div>
+        <p>This paragraph is also a descendant of the container and will be blue.</p>
+    </div>
+</div>
+<p>This paragraph is outside the container and will not be blue.</p>
+2. Child Selector (>):
+----------------------
+Definition: The child selector targets all elements that are direct children of a specified element. It is represented by a greater than sign (>) between two selectors.
+Example:
+
+.container > p {
+    color: green;
+}
+
+<div class="container">
+    <p>This paragraph is a direct child of the container and will be green.</p>
+    <div>
+        <p>This paragraph is not a direct child of the container and will not be green.</p>
+    </div>
+</div>
+<p>This paragraph is outside the container and will not be green.</p>
+3. Adjacent Sibling Selector (+):
+---------------------------------
+Definition: The adjacent sibling selector targets an element that is immediately preceded by a specified element. It is represented by a plus sign (+) between two selectors.
+Example:
+
+.container + p {
+    color: red;
+}
+
+<div class="container"></div>
+<p>This paragraph is immediately after the container and will be red.</p>
+<p>This paragraph is not immediately after the container and will not be red.</p>
+4. General Sibling Selector (~):
+----------------------------------
+Definition: The general sibling selector targets all elements that are siblings of a specified element. It is represented by a tilde (~) between two selectors.
+Example:
+
+.container ~ p {
+    color: orange;
+}
+
+<div class="container"></div>
+<p>This paragraph is a sibling of the container and will be orange.</p>
+<p>This paragraph is also a sibling of the container and will be orange.</p>
+<div></div>
+<p>This paragraph is not a sibling of the container and will not be orange.</p>
+Summary of Combinators:
+--------------------------
+Descendant Selector (space):
+----------------------------
+Usage: Targets all elements that are descendants of a specified element.
+Example: .parent p { color: blue; }
+Applies to all <p> elements inside elements with the parent class.
+Child Selector (>):
+-------------------
+Usage: Targets all elements that are direct children of a specified element.
+Example: .parent > p { color: green; }
+Applies to direct <p> child elements of elements with the parent class.
+Adjacent Sibling Selector (+):
+---------------------------------
+Usage: Targets an element that is immediately preceded by a specified element.
+Example: h1 + p { color: red; }
+Applies to the first <p> element immediately following an <h1> element.
+General Sibling Selector (~):
+-----------------------------
+Usage: Targets all elements that are siblings of a specified element.
+Example: h1 ~ p { color: orange; }
+Applies to all <p> elements that are siblings of an <h1> element.
+Using these combinators effectively allows you to create precise and efficient CSS rules to style elements based on their relationships in the DOM.
+
+
+3. Background Properties
+===========================
+Detailed Definitions and Examples
+
+background-color: Sets the background color of an element.
+-----------------
+
+.example {
+    background-color: #f0f0f0; /* Light grey */
+}
+
+<div class="example">This div has a light grey background.</div>
+
+background-image: Sets the background image of an element.
+-----------------
+.example {
+    background-image: url('image.jpg');
+}
+
+<div class="example">This div has a background image.</div>
+
+background-repeat: Controls the repeating of the background image.
+-----------------
+.example {
+    background-image: url('image.jpg');
+    background-repeat: no-repeat;
+}
+
+<div class="example">This div has a background image that does not repeat.</div>
+
+background-position: Sets the initial position of the background image.
+---------------------
+
+.example {
+    background-image: url('image.jpg');
+    background-position: center;
+}
+
+<div class="example">This div has a centered background image.</div>
+
+background-size: Specifies the size of the background image.
+----------------
+
+.example {
+    background-image: url('image.jpg');
+    background-size: cover;
+}
+
+<div class="example">This div has a background image that covers the entire area.</div>
+
+background-attachment: Specifies whether the background image is fixed or scrolls with the page.
+---------------------
+
+.example {
+    background-image: url('image.jpg');
+    background-attachment: fixed;
+}
+
+<div class="example">This div has a fixed background image.</div>
+
+background: A shorthand property for setting multiple background properties in one declaration.
+-----------
+
+.example {
+    background: #f0f0f0 url('image.jpg') no-repeat center/cover fixed;
+}
+
+<div class="example">This div has multiple background properties set using shorthand.</div>
+
+
+Text Properties in CSS:
+---------------------
+CSS provides various properties to style and format text. Here are the detailed definitions of each property along with explanations and examples:
+
+1. color:
+---------
+Definition: Sets the color of the text.
+Example:
+
+.text-color {
+    color: #ff0000; /* Red */
+}
+
+<p class="text-color">This text is red.</p>
+
+2. text-align:
+----------------
+Definition: Specifies the horizontal alignment of text within an element.
+Values: left, right, center, justify
+Example:
+
+.text-align {
+    text-align: center;
+}
+
+<p class="text-align">This text is centered.</p>
+3. text-decoration:
+-------------------
+Definition: Specifies the decoration added to the text.
+Values: none, underline, overline, line-through
+Example:
+
+.text-decoration {
+    text-decoration: underline;
+}
+
+<p class="text-decoration">This text is underlined.</p>
+4. text-transform:
+--------------------
+Definition: Controls the capitalization of text.
+Values: none, capitalize, uppercase, lowercase
+Example:
+
+.text-transform {
+    text-transform: uppercase;
+}
+
+<p class="text-transform">This text is uppercase.</p>
+5. text-indent:
+----------------
+Definition: Specifies the indentation of the first line of text in a block element.
+Example:
+
+.text-indent {
+    text-indent: 50px;
+}
+
+<p class="text-indent">This text has a 50px indentation on the first line.</p>
+6. line-height:
+-----------------
+Definition: Sets the height between lines of text.
+Example:
+
+.line-height {
+    line-height: 1.5;
+}
+
+<p class="line-height">This text has a line height of 1.5.</p>
+7. letter-spacing:
+--------------------
+Definition: Sets the spacing between characters in text.
+Example:
+
+.letter-spacing {
+    letter-spacing: 2px;
+}
+
+<p class="letter-spacing">This text has 2px letter spacing.</p>
+8. word-spacing:
+-----------------
+Definition: Sets the spacing between words in text.
+Example:
+
+.word-spacing {
+    word-spacing: 5px;
+}
+
+<p class="word-spacing">This text has 5px word spacing.</p>
+9. font-family:
+-----------------
+Definition: Specifies the font for text.
+Example:
+
+.font-family {
+    font-family: 'Arial', sans-serif;
+}
+
+<p class="font-family">This text uses Arial font.</p>
+10. font-size:
+----------------
+Definition: Sets the size of the font.
+Example:
+
+.font-size {
+    font-size: 20px;
+}
+
+<p class="font-size">This text has a font size of 20px.</p>
+11. font-style:
+---------------
+Definition: Specifies the style of the font.
+Values: normal, italic, oblique
+Example:
+
+.font-style {
+    font-style: italic;
+}
+
+<p class="font-style">This text is italic.</p>
+12. font-weight:
+----------------
+Definition: Sets the weight (or boldness) of the font.
+Values: normal, bold, bolder, lighter, or numeric values from 100 to 900.
+Example:
+
+.font-weight {
+    font-weight: bold;
+}
+
+<p class="font-weight">This text is bold.</p>
+13. text-shadow:
+------------------
+Definition: Adds shadow to text.
+Example:
+
+.text-shadow {
+    text-shadow: 2px 2px 5px #aaaaaa;
+}
+
+<p class="text-shadow">This text has a shadow.</p>
+
+Box Model Properties in CSS:
+==============================
+The CSS box model is a fundamental concept that defines the structure of elements in a web page. It consists of four main properties: padding, margins, borders, and outline. Each of these properties plays a crucial role in determining the layout and spacing of elements.
+
+1. Padding:
+----------
+Definition: Padding is the space between the content of an element and its border. It is inside the element's border and can be used to create space around the content.
+Example:
+
+.example-padding {
+    padding: 20px;
+}
+
+<div class="example-padding" style="border: 1px solid black;">
+    This div has 20px padding on all sides.
+</div>
+Individual Sides: Padding can be set for individual sides using padding-top, padding-right, padding-bottom, and padding-left.
+------------------
+.example-padding-sides {
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+    padding-left: 25px;
+}
+
+<div class="example-padding-sides" style="border: 1px solid black;">
+    This div has different padding for each side.
+</div>
+2. Margins:
+------------
+Definition: Margins are the space outside the element's border. They create space between the element and other elements on the page.
+Example:
+
+.example-margin {
+    margin: 20px;
+}
+
+<div class="example-margin" style="border: 1px solid black;">
+    This div has 20px margin on all sides.
+</div>
+Individual Sides: Margins can be set for individual sides using margin-top, margin-right, margin-bottom, and margin-left.
+----------------
+.example-margin-sides {
+    margin-top: 10px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    margin-left: 25px;
+}
+
+<div class="example-margin-sides" style="border: 1px solid black;">
+    This div has different margins for each side.
+</div>
+3. Borders:
+-----------
+Definition: Borders are the lines that surround the padding and content of an element. They can be styled in terms of width, color, and style.
+Example:
+
+.example-border {
+    border: 2px solid red;
+}
+
+<div class="example-border">
+    This div has a 2px solid red border.
+</div>
+Individual Sides: Borders can be set for individual sides using border-top, border-right, border-bottom, and border-left.
+----------------
+.example-border-sides {
+    border-top: 3px solid green;
+    border-right: 4px dashed blue;
+    border-bottom: 5px dotted purple;
+    border-left: 6px double orange;
+}
+
+<div class="example-border-sides">
+    This div has different borders for each side.
+</div>
+4. Outline:
+------------
+Definition: The outline is a line drawn outside the element's border to make the element stand out. Unlike borders, outlines do not take up space and do not affect the size or position of the element.
+Example:
+
+.example-outline {
+    outline: 2px solid black;
+}
+
+<div class="example-outline" style="border: 1px solid red;">
+    This div has a 2px solid black outline.
+</div>
+Outline Offset: You can use outline-offset to specify the space between the outline and the border edge.
+---------------
+.example-outline-offset {
+    outline: 2px solid black;
+    outline-offset: 5px;
+}
+
+<div class="example-outline-offset" style="border: 1px solid red;">
+    This div has a 2px solid black outline with a 5px offset.
+</div>
+
+
+ Float & Clear Properties:
+ ===========================
+Float Property:
+------------
+Definition: The float property is used to position an element to the left or right of its container, allowing text and inline elements to wrap around it.
+Values: left, right, none, inherit
+Example:
+
+.float-left {
+    float: left;
+    width: 200px;
+    margin: 10px;
+}
+.float-right {
+    float: right;
+    width: 200px;
+    margin: 10px;
+}
+
+<div class="float-left" style="border: 1px solid black;">
+    This div floats to the left.
+</div>
+<div class="float-right" style="border: 1px solid black;">
+    This div floats to the right.
+</div>
+<p>This text wraps around the floated divs.</p>
+Clear Property:
+-----------------
+Definition: The clear property is used to control the behavior of an element with respect to floating elements. It prevents elements from wrapping around floated elements.
+Values: left, right, both, none, inherit
+Example:
+
+.clear-both {
+    clear: both;
+}
+
+<div class="float-left" style="border: 1px solid black;">
+    This div floats to the left.
+</div>
+<div class="float-right" style="border: 1px solid black;">
+    This div floats to the right.
+</div>
+<div class="clear-both" style="border: 1px solid black;">
+    This div clears both floats and appears below the floated divs.
+</div>
+
+10. Display Properties
+Inline, Block, Inline-Block
+==============================
+Inline:
+--------
+Definition: The inline display value makes an element display inline with other elements, meaning it will not start on a new line and only takes up as much width as necessary.
+Example:
+
+.inline-element {
+    display: inline;
+}
+
+<span class="inline-element" style="border: 1px solid red;">Inline Element 1</span>
+<span class="inline-element" style="border: 1px solid blue;">Inline Element 2</span>
+This will render both elements on the same line, with only as much width as they need.
+Block:
+----------
+Definition: The block display value makes an element start on a new line and take up the full width available, stretching as far as its container allows.
+Example:
+
+.block-element {
+    display: block;
+}
+
+<div class="block-element" style="border: 1px solid red;">Block Element 1</div>
+<div class="block-element" style="border: 1px solid blue;">Block Element 2</div>
+This will render each element on a new line, taking up the full width of the container.
+Inline-Block:
+-------------
+Definition: The inline-block display value makes an element behave like an inline element (does not start on a new line) while allowing it to have width and height like a block element.
+Example:
+
+.inline-block-element {
+    display: inline-block;
+    width: 150px;
+    height: 100px;
+    border: 1px solid green;
+}
+
+<div class="inline-block-element">Inline-Block Element 1</div>
+<div class="inline-block-element">Inline-Block Element 2</div>
+This will render the elements on the same line, with each element having its specified width and height.
+Comparison Example:
+-------------------
+
+<style>
+  .inline-example {
+      display: inline;
+      border: 1px solid red;
+  }
+  .block-example {
+      display: block;
+      border: 1px solid blue;
+  }
+  .inline-block-example {
+      display: inline-block;
+      border: 1px solid green;
+      width: 100px;
+      height: 50px;
+  }
+</style>
+
+<p class="inline-example">This is an inline element.</p>
+<p class="inline-example">This is an inline element.</p>
+
+<div class="block-example">This is a block element.</div>
+<div class="block-example">This is a block element.</div>
+
+<div class="inline-block-example">This is an inline-block element.</div>
+<div class="inline-block-example">This is an inline-block element.</div>
+Inline Example: The inline elements will appear on the same line, taking only the space needed.
+Block Example: The block elements will start on a new line and take the full width available.
+Inline-Block Example: The inline-block elements will appear on the same line, but they will respect the width and height specified.
+
+
+
+Position Properties:
+---------------------
+CSS provides several positioning schemes that allow you to control the layout and position of elements on a web page. Here are the detailed definitions of each position property along with explanations and examples:
+
+1. Relative Positioning:
+-----------------------
+Definition: The relative value positions an element relative to its normal position. The space for the element is still reserved in the page layout, but it can be moved from its original position using the top, right, bottom, and left properties.
+Example:
+
+.relative-position {
+    position: relative;
+    top: 20px;
+    left: 30px;
+    border: 1px solid black;
+}
+
+<div class="relative-position">
+    This div is moved 20px down and 30px to the right from its normal position.
+</div>
+2. Absolute Positioning:
+--------------------------
+Definition: The absolute value positions an element relative to its nearest positioned ancestor (an ancestor with a position other than static). If no such ancestor exists, it is positioned relative to the initial containing block (usually the <html> element). The element is removed from the normal document flow.
+Example:
+
+.absolute-position {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    border: 1px solid red;
+}
+.container {
+    position: relative;
+    border: 1px solid blue;
+    height: 200px;
+}
+
+<div class="container">
+    <div class="absolute-position">
+        This div is absolutely positioned within the container.
+    </div>
+    This is the container.
+</div>
+3. Fixed Positioning:
+------------------------
+Definition: The fixed value positions an element relative to the browser window, regardless of scrolling. The element stays in the same position even when the page is scrolled.
+Example:
+
+.fixed-position {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    border: 1px solid green;
+}
+
+<div class="fixed-position">
+    This div is fixed to the bottom-right corner of the browser window.
+</div>
+4. Static Positioning:
+
+Definition: The static value is the default value. It positions an element according to the normal flow of the document. The top, right, bottom, and left properties have no effect.
+Example:
+
+.static-position {
+    position: static;
+    border: 1px solid purple;
+}
+
+<div class="static-position">
+    This div is positioned statically.
+</div>
+5. Sticky Positioning:
+------------------------
+Definition: The sticky value is a hybrid of relative and fixed positioning. An element with position: sticky is treated as relative until it crosses a specified threshold, at which point it is treated as fixed. The threshold is defined using the top, right, bottom, or left properties.
+Example:
+
+.sticky-position {
+    position: sticky;
+    top: 0;
+    border: 1px solid orange;
+    background-color: yellow;
+}
+
+<div class="sticky-position">
+    This div will stick to the top of the viewport when you scroll down.
+</div>
+<p>Scroll down to see the sticky effect.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.</p>
+Summary of Position Properties:
+---------------------------------
+Relative: Moves an element relative to its normal position without changing the layout around it.
+Absolute: Positions an element relative to its nearest positioned ancestor or the initial containing block. Removed from the normal document flow.
+Fixed: Positions an element relative to the browser window, staying in the same place even when scrolling.
+Static: The default position, following the normal document flow.
+Sticky: A hybrid positioning mode that toggles between relative and fixed based on scroll position.
+
+
+
+
+
