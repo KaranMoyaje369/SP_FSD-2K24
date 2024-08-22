@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exe-8</title>
+</head>
+<body>
+    <h1>Select all <p> elements and change their text content to "I was selected by tag name."</h1>
+
+        <p class=""></p>
+        <p class=""></p>
+        <p class=""></p>
+        <p class=""></p>
+
+        <script>
+           var tagName = document.getElementsByTagName("p");
+
+           for(let i=0; i<=tagName.length; i++) {
+            tagName[i].textContent = "I was selected by tag name.";
+           }
+        </script>
+</body>
+</html>
