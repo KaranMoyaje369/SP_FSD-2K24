@@ -1,0 +1,39 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container{
+    text-align: center;
+}
+
+.color-box{
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+    background-color: #fff;
+    border: 2px solid black;
+}
+
+button{
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+p{
+    font-size: 18px;
+    margin-top: 10px;
+}
