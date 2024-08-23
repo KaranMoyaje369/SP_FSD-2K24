@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.container{
+    width: 100px;
+    height: 50px;
+    position: relative;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    background-color: #ccc
+}
+
+.toggle-switch{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.toggle-switch.on{
+    left: 50px;
+    background-color: #4caf50;
+}
