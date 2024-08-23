@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+nav{
+    border: 2px solid black;
+    max-width: 600px;
+    margin: 0 auto 1rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    border-radius: 3rem;
+}
+
+nav h2{
+    background-color: yellow;
+    padding: 1rem;
+    border-radius: 3rem 3rem 0 0;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+li{
+    border-top: 2px solid black;
+}
+
+li a{
+    display: block;
+}
+
+li a, li a:visited{
+    text-decoration: none;
+    color: black;
+}
+
+li a:hover, li a:active{
+    background-color: blue;
+    color: white;
+}
+
+li:last-child a{
+    border-radius: 0 0 2.8rem 2.8rem;
+}
