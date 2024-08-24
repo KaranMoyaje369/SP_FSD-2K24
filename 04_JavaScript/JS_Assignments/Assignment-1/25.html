@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Function to calculate net salary
+        function calculateNetSalary(grossSalary, deductions) {
+            return grossSalary - deductions;
+        }
+
+        // Get user input for gross salary and deductions
+        let grossSalary = parseFloat(prompt("Enter the gross salary: "));
+        let taxDeduction = parseFloat(prompt("Enter the tax deduction: "));
+        let providentFund = parseFloat(prompt("Enter the provident fund deduction: "));
+        let insurance = parseFloat(prompt("Enter the insurance deduction: "));
+
+        // Calculate total deductions
+        let totalDeductions = taxDeduction + providentFund + insurance;
+
+        // Calculate net salary
+        let netSalary = calculateNetSalary(grossSalary, totalDeductions);
+
+        // Print the result
+        document.write(`The net salary is: ${netSalary.toFixed(2)}`);
+
+    </script>
+</body>
+
+</html>

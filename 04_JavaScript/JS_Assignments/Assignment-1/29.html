@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Conversion factor: 1 meter = 39.3701 inches
+        const METERS_TO_INCHES = 39.3701;
+
+        // Function to convert meters to inches
+        function convertToInches(meters) {
+            return meters * METERS_TO_INCHES;
+        }
+
+        // Get user input for the length in meters
+        let meters = parseFloat(prompt("Enter the length in meters: "));
+
+        // Convert the given meters to inches
+        let inches = convertToInches(meters);
+
+        // Print the result
+       document.write(`${meters} meters is approximately ${inches} inches.`);
+
+    </script>
+</body>
+
+</html>

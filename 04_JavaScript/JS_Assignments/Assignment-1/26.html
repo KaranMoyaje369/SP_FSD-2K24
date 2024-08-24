@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Function to calculate EMI
+        function calculateEMI(principal, annualInterestRate, numberOfMonths) {
+            // Convert annual interest rate to monthly and decimal format
+            let monthlyInterestRate = annualInterestRate / 12 / 100;
+
+            // EMI formula calculation
+            let emi = (principal * monthlyInterestRate * Math.pow(1 + monthlyInterestRate, numberOfMonths)) /
+                (Math.pow(1 + monthlyInterestRate, numberOfMonths) - 1);
+
+            return emi;
+        }
+
+        // Get user input for the principal amount and number of months
+        let principal = parseFloat(prompt("Enter the loan amount (principal): "));
+        let numberOfMonths = parseInt(prompt("Enter the number of months for EMI: "));
+
+        // Annual interest rate
+        const annualInterestRate = 4;
+
+        // Calculate EMI
+        let emi = calculateEMI(principal, annualInterestRate, numberOfMonths);
+
+        // Print the result
+        document.write(`The EMI for a loan amount of ${principal} over ${numberOfMonths} months at an annual interest rate of ${annualInterestRate}% is approximately ${emi.toFixed(2)}`);
+
+    </script>
+</body>
+
+</html>

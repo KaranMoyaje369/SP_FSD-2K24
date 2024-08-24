@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Function to check if a number is odd
+
+        function isEven(number) {
+            return number % 2 == 0;
+        }
+
+        // Get user input for the start and end values of the range
+
+        let start = parseInt(prompt("Enter the start value: "));
+        let end = parseInt(prompt("Enter the end value: "));
+
+        document.write(`Even numbers between ${start} and ${end}:`+"<br>");
+
+        // Loop through the range and print numbers that are even
+
+        for (let i = start; i <= end; i++) {
+            if (isEven(i)) {
+                document.write(i+"<br>");
+            }
+        }
+
+    </script>
+</body>
+
+</html>
