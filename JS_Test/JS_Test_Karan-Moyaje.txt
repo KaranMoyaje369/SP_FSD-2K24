@@ -1,0 +1,195 @@
+Q1} Write a functions that converts a temperature in celcius to fahrenheit.
+
+=>     <script>
+
+             function celToFahrenheit(temp) {
+             console.log(`Temp in Celcius to Fahrenheit :(5/9)*(temp - 32)`);
+             }
+	         celToFahrenheit(50);
+       
+       </script>
+	 
+Q2} write a function that checks a given number is positive, negative, zero.
+
+=>  <script>
+
+      function numCheck(num) {
+     
+	 if(num ===0){
+	      	 console.log("Number is Equal to Zero");
+	 }
+	 
+	 else if(num>0) {
+	 	     console.log("Number is Positive");
+	 }
+	 
+	 else {
+	 	    console.log("Number is Negative. ");
+	 }
+
+   }
+   
+    </script>
+	
+	
+	
+Q3}  Extraxt a portion of a string using the substring method.
+
+    <script>
+	
+	let string1 = "Welcome to Hyderabad";
+	
+	let res = string1.substring(0,5);
+	console.log(res);
+	
+	</script>
+
+	
+	
+Q4}  Remove reading and trailing whitespaces from a string and find before and after length of the given string.
+
+=>  <script>
+
+    let oldString = "   Old String   ";
+	let lengthOfOldString = oldString.length;
+	console.log(lengthOfOldString);
+	
+	let newString = oldString.trim();
+	let lengthOfNewString = newString.length;
+	console.log(lengthOfNewString);
+	
+	
+    </script>
+	
+	
+Q5} create a person object, Access and print the "name" and "age" properties of person object.
+
+=> <script>
+
+
+   let person = {
+    name : "Karan Moyaje",
+	age : 22;
+   }
+   
+   console.log(person.name);
+   console.log(person.age);
+   </script>
+   
+Q6} Create an object with properties representing the days of the week. Write a loop 
+to iterate through these properties and print their values
+
+
+=>   let days = {
+      day1 : "Monday",
+	  day2 : "Tuesday",
+	  day3 : "Wednesday",
+	  day4 : "Thursday",
+	  day5 : "Friday",
+	  day6 : "Saturday",
+	  day7 : "Sunday"
+    }
+	
+	for(let day of days) {
+	   console.log(day);
+	}
+	
+Q.7} How do you flatten a nested array in JavaScript?
+
+=> <script>
+
+    let newArray = [
+	2,4,6,[8,10],12
+	]
+	
+	let flatArray = newArray.flat();
+	console.log(flatArray);
+   </script>	
+   
+ Q8} How do you remove a specific element from an array
+
+=> <script>
+   
+    let newArray = ["karan",22,"Male", "Maharashtra"]
+	console.log(newArray);
+    
+	let result = newArray.remove(22)
+	
+	console.log(result);
+   </script> 
+   
+Q9}  How do you check if an array contains a specific value.
+
+=>    <script>
+
+      let newArray = ["karan",22,"Male", "Maharashtra"]
+	  
+	  let res = newArray.includes("karan");
+	  
+	  console.log(res);
+      </script>
+	  
+Q10} Add a New Element Create a new <p> element with the text "This is a new paragraph." and append it to 
+     a <div> element with the id "container"
+
+=> <script>
+    
+	let container = document.getElementById("container")
+    let newEle =  createElement("p");
+	
+	let res = newEle.innerText = "This is a new Paragraph";
+	
+	container.appendChild(res);
+	
+	
+   </script>
+
+Q11}  Select by ID Select the element with the ID "my Element" and change its text content to "I was 
+      selected by ID.   
+	 
+ 	 
+=> 
+   <script>
+   
+   let newEle = document.getElementById("myElement");
+   let res = newEle.innerText = "I was selected by ID";
+
+   console.log(res);
+
+   </script>
+
+Q12}  write js code age is greater than 16 and the owns Car variable is true, the if 
+      block will run. The message printed to the console will be "sathya is old enough to 
+      drive and has his own car.
+	  
+	  
+=>  <script>
+  let age = promt("Enter the Age");
+   let ownCar = true;
+   
+   if(age > 16 && ownCar === true) {
+       console.log(`sathya is ${age} enough to drive and his own car`);
+   }
+   
+   else{
+     console.log(`person can't get this service.`)
+   }
+   
+    </script>
+
+Q13}
+
+=> <script>
+   
+   const time = new Date();
+
+const currentHour = time.getHours();
+
+if (currentHour >= 21) {
+  console.log("Good Night");
+}
+   </script>   
+   
+      
+
+   
