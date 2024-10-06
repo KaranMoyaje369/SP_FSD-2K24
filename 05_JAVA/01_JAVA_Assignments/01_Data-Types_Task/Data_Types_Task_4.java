@@ -1,4 +1,5 @@
 package Data_Types_Tasks;
+
 import java.util.Scanner;
 
 public class Data_Types_Task_4 {
