@@ -3,6 +3,7 @@
 //Calculate the area of a rectangle.
 //Write a Java program that calculates the area of a rectangle using the formula area = length * width. 
 //Declare two double variables for length and width, and calculate the area.
+
 package Variable_Tasks;
 
 

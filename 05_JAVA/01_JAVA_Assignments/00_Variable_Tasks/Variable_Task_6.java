@@ -3,6 +3,7 @@
 //Calculate the total cost.
 //Write a Java program that calculates the total cost of an item based on its price and quantity. 
 //Declare a double variable for the price and an int variable for the quantity, then calculate and display the total cost.
+
 package Variable_Tasks;
 
 
