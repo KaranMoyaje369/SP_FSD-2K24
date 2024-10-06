@@ -1,6 +1,5 @@
 package Banking_System;
 
-
 class Account {
 	
 	String AccountNo;
