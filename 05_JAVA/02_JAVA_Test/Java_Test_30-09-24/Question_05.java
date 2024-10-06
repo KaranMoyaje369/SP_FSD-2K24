@@ -20,6 +20,7 @@ public class Question_05 {
 
 }
 
+
 // Output :
 
 // Sum Of Negative Number : -47

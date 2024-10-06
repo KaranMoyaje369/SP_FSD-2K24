@@ -13,7 +13,7 @@ public class Question_04 {
 		System.out.println("Enter Number : ");
 		int num = sc.nextInt();
 		
-//		
+
 		for(int i : arr) {
 			
 			if(i == num) {

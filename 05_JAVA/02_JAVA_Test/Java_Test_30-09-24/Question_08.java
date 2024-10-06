@@ -21,6 +21,7 @@ public class Question_08 {
 
 }
 
+
 // Output :
 
 // Average Is : 4

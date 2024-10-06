@@ -17,7 +17,6 @@ public class Question_09 {
 
 	}
 
-
 // Output : 
 
 // Sum Is : 28

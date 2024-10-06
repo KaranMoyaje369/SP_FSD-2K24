@@ -18,7 +18,6 @@ public class Question_07 {
 
 }
 
-
 // Output :
 
 // Positive Number in agivrn array is : 
