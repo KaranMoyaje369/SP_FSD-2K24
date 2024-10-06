@@ -1,3 +1,4 @@
+
 //Write a program in to find the sum of all elements of the array
 
 import java.util.Scanner;

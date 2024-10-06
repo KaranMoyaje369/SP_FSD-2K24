@@ -1,3 +1,4 @@
+
 //Write a program in to array size to be user input print it
 
 import java.util.Scanner;

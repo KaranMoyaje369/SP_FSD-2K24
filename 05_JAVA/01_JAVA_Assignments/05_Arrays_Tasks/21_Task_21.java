@@ -1,3 +1,4 @@
+
 //Write a program to calculate the average value of array elements
 
 import java.util.Scanner;

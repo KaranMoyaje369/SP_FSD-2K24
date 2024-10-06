@@ -1,3 +1,4 @@
+
 //Write a program to array elements print all Negative number
 
 import java.util.Scanner;

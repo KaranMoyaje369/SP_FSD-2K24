@@ -1,4 +1,4 @@
-// //Write a program to store elements in an array and print it
+ //Write a program to store elements in an array and print it
 
 import java.util.Scanner;
 

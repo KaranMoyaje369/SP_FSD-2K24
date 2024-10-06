@@ -1,3 +1,4 @@
+
 //Write a program to array elements print all Even number
 
 import java.util.Scanner;

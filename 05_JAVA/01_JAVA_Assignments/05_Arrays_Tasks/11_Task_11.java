@@ -1,3 +1,4 @@
+
 //Write a program to array elements to print sum of Cubic Values
 
 import java.util.Scanner;

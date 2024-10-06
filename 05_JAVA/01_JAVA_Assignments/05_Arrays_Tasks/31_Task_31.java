@@ -1,3 +1,4 @@
+
 //write a java program print Odd and Even Numbers from an Array
 
 import java.util.Scanner;

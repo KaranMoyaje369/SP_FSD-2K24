@@ -1,4 +1,5 @@
 
+
 //Write a program to copy the elements of one array into another array
 import java.util.Arrays;
 import java.util.Scanner;

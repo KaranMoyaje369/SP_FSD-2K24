@@ -1,3 +1,4 @@
+
 //write a program given array find duplicate numbers
 
 

@@ -1,3 +1,4 @@
+
 //Write a program to find the second smallest element in an array
 
 import java.util.Arrays;

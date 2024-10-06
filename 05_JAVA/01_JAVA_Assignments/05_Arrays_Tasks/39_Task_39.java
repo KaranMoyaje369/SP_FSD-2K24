@@ -1,3 +1,4 @@
+
 //write a java program the sum of each row and each column of a matrix
 
 import java.util.Scanner;

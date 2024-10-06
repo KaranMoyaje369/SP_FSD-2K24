@@ -1,3 +1,4 @@
+
 //write a java program print the elements of an array present on odd position
 
 import java.util.Scanner;

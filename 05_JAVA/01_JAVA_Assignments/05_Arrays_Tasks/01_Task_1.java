@@ -1,4 +1,4 @@
-// //write a java program add two matrices
+ //write a java program add two matrices
 
 public class Task_1 {
 

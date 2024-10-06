@@ -1,3 +1,4 @@
+
 //Write a program to array elements to print cubic values
 
 import java.util.Arrays;

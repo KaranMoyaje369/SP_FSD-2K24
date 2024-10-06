@@ -1,3 +1,4 @@
+
 //Write a program to find the maximum and minimum element in an array
 
 import java.util.Scanner;

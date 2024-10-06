@@ -1,3 +1,4 @@
+
 //write a java program find smallest number
 
 import java.util.Scanner;

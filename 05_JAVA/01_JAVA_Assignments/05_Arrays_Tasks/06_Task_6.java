@@ -1,3 +1,4 @@
+
 //Write a program to array elements print all Odd number
 
 import java.util.Scanner;
