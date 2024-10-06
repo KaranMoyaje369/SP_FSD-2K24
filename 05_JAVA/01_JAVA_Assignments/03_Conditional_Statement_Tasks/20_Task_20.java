@@ -1,4 +1,5 @@
 
+
 //Write a program to check whether a character is uppercase or lowercase alphabet
 
 import java.util.Scanner;

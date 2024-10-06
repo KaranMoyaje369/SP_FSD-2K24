@@ -8,6 +8,7 @@ For unit above 250 Rs. 1.50/unit
 An additional surcharge of 20% is added to the bill
  * */
 
+
 import java.util.Scanner;
 
 public class Task_19 {

@@ -1,3 +1,4 @@
+
 //Write a program to calculate profit or loss
 
 import java.util.Scanner;

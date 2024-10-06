@@ -9,6 +9,7 @@ Percentage >= 40% : Grade E
 Percentage < 40% : Grade F
  * */
 
+
 import java.util.Scanner;
 
 public class Task_15 {

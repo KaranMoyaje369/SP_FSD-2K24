@@ -6,6 +6,7 @@
  * the keyboard, write a program to calculate the total expenses
  * */
 
+
 import java.util.Scanner;
 
 public class Task_17 {

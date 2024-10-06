@@ -8,6 +8,7 @@ Basic Salary <= 20000 : HRA = 25%, DA = 90%
 Basic Salary > 20000 : HRA = 30%, DA = 95%
  * */
 
+
 import java.util.Scanner;
 
 public class Task_9 {
