@@ -1,6 +1,5 @@
 package Employee_Management_System;
 
-
 class Employee {
 	
 	String name;
