@@ -1,3 +1,4 @@
+
 //Write a program to print reverse tables
 
 import java.util.Scanner;

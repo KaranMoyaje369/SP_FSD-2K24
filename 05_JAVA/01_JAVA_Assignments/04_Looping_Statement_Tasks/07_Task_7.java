@@ -1,5 +1,4 @@
 
-
 //Write a program to convert Hexadecimal to Decimal number system
 import java.util.Scanner;
 

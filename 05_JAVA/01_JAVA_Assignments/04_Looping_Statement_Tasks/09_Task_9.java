@@ -1,3 +1,4 @@
+
 //Write a program to print all odd number between 1 to 100
 
 import java.util.Scanner;

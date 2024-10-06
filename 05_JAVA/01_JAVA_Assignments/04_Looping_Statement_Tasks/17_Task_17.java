@@ -1,3 +1,4 @@
+
 //Write a program to find sum of all even numbers between 1 to n
 
 import java.util.Scanner;

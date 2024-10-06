@@ -1,4 +1,5 @@
 
+
 //write a program to Check Whether a Given Number is Prime or Not
 
 import java.util.Scanner;

@@ -1,3 +1,4 @@
+
 //Write a program to find sum of all natural numbers between 1 to n
 
 import java.util.Scanner;

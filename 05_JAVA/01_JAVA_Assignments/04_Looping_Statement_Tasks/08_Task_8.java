@@ -1,3 +1,4 @@
+
 //Write a program to print all natural numbers from 1 to n
 
 import java.util.Scanner;
