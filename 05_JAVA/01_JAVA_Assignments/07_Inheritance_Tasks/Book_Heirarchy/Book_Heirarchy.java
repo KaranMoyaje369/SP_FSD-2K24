@@ -1,6 +1,5 @@
 package Book_Heirarchy;
 
-
 class Book {
 	
 	String title;
