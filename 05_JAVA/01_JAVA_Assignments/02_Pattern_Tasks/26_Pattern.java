@@ -1,4 +1,5 @@
 
+
 public class Pattern_26 {
 
 public static void main(String[] args) {
